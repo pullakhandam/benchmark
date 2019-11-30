@@ -1,4 +1,4 @@
-put your benchmarls here
+put your benchmarks here
 
 1_local-aws-USERNAME.md
 2_local-aws-USERNAME.md

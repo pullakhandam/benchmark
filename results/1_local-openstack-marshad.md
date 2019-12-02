@@ -1,8 +1,9 @@
-#Openstack (Chameleon Cloud) Benchmarks (1_local)
+# Openstack (Chameleon Cloud) Benchmarks (1_local)
 
-##1_local-openstack-marshad.md
+## 1_local-openstack-marshad.md
 
-###test_cms
+### test_cms
+
 Executed:
 `pytest -v --capture=no cloudmesh-cloud\tests\1_local\test_cms.py`
 
@@ -40,12 +41,11 @@ Results:
 | benchmark_start_stop     | 0.0   | 2019-11-29 17:12:14 |     | ('ONYX64',) |      | Windows |             | ('10', '10.0.18362', 'SP0', '') |
 +--------------------------+-------+---------------------+-----+-------------+------+---------+-------------+---------------------------------+
 
-
 PASSED
 
 =========================================================================== 4 passed in 15.35s ============================================================================`
 
-###test_config
+### test_config
 
 Executed:
 
@@ -78,7 +78,7 @@ PASSED
 ============================================================================ 9 passed in 2.37s ============================================================================
 `
 
-###test_data
+### test_data
 
 *FAILED*
 *Failure is likely due to unsupported python modules on windows, `grp` and `pwd`. These modules are used in: test_DatabaseUpdate*
@@ -106,7 +106,7 @@ E   ModuleNotFoundError: No module named 'grp'
 ============================================================================ 1 error in 0.16s =============================================================================
 `
 
-###test_group
+### test_group
 
 Executed:
 
@@ -126,8 +126,7 @@ PASSED
 
 ====================================================== 4 passed in 6.49s =======================================================`
 
-
-###test_key
+### test_key
 
 Executed:
 
@@ -170,7 +169,7 @@ PASSED
 
 ============================================================================ 3 passed in 2.46s ================================================`
 
-###test_name
+### test_name
 
 *FAILED*
 *Errors are likely due to the mismatches when assert is called. There are hardcoded values (e.g. ‘gregor’, ‘/Users/gray/.cloudmesh/name.yaml’) that are being compared against and failing.*
@@ -371,7 +370,8 @@ cloudmesh-cloud\tests\1_local\test_name.py:93: AssertionError
 
 `
 
-###test_ping
+### test_ping
+
 *Note: This test requires the command line interface be run in administrative mode*
 
 Executed:
@@ -410,7 +410,7 @@ PASSED
 
 `
 
-###test_sec_command
+### test_sec_command
 
 *FAILED*
 *NOTE: This test fails on Windows due to:
@@ -581,8 +581,7 @@ E           AssertionError: assert 'default' in '\r\nUsage:\r\n\r\n    sec rule 
 cloudmesh-cloud\tests\1_local\test_sec_command.py:167: AssertionError
 ====================================================================== 6 failed, 4 passed in 40.79s =======================================================================`
 
-
-###test_secgroup_database
+### test_secgroup_database
 
 Executed:
 
@@ -631,8 +630,7 @@ PASSED
 
 =========================================================================== 9 passed in 29.25s ============================================================================`
 
-
-###test_shell
+### test_shell
 
 Executed:
 

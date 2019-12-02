@@ -1,8 +1,8 @@
-#Openstack (Chameleon Cloud) Benchmarks (2_local)
+# Openstack (Chameleon Cloud) Benchmarks (2_local)
 
-##2_local-openstack-marshad.md
+## 2_local-openstack-marshad.md
 
-###test_ssh
+### test_ssh
 
 *FAILED*
 *NOTE: first point of failure can be attributed to
@@ -86,23 +86,4 @@ E           KeyError: 'USER'
 
 ..\AppData\Local\Programs\Python\Python37-32\lib\os.py:678: KeyError
 ======================================================================= 2 failed, 1 passed in 0.96s =======================================================================
-
 `
-
-
-##2_security-aws-USERNAME.md
-
-##cloud-aws-USERNAME.md
-
-##others
-
-###aws-USERNAME.md
-
-###azure-USERNAME.md
-
-###google-USERNAME.md
-
-##storage tests
-###storage-USERNAME.md
-
-other storage tests are in cloudmesh-storage\tests

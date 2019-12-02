@@ -1,16 +1,22 @@
-put your benchmarks here
+Put your benchmarks in the results repository.
+File naming conventions should match the following:
 
-1_local-aws-USERNAME.md
-2_local-aws-USERNAME.md
-2_security-aws-USERNAME.md
-cloud-aws-USERNAME.md
+## Local, Security, and Cloud Tests
+- 1_local-aws-USERNAME.md
+- 2_local-aws-USERNAME.md
+- 2_security-aws-USERNAME.md
+- cloud-aws-USERNAME.md
 
-others
-aws-USERNAME.md
-azure-USERNAME.md
-google-USERNAME.md
+## Others
 
-storage tests
-storage-USERNAME.md
+- aws-USERNAME.md
+- azure-USERNAME.md
+- google-USERNAME.md
 
-other storage tests are in cloudmesh-storage\tests
+## Storage Tests
+
+- storage-USERNAME.md
+
+## Notes
+
+- other storage tests are in cloudmesh-storage\tests

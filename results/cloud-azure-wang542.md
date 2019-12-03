@@ -1,4 +1,5 @@
 # Cloud-Azure Benchmark
+* Complete output can be accessed [here](https://github.com/cloudmesh-community/fa19-516-157/tree/master/Benchmark_Output)
 ## Summary
 * test_01 & test_02 passed, some functions are skipped because key functions such as storage, list, delete isn't supported by Azure
 * test_04 passed, butthe entire flavor was listed which caused the output file to be almost 46MB and 98% is the flavor result

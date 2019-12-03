@@ -1,4 +1,5 @@
 # 1_local Benchmark
+* Complete output can be accessed [here](https://github.com/cloudmesh-community/fa19-516-157/tree/master/Benchmark_Output)
 ## Summary
 * test_data fails because grp isn't supported
 * test_name fails because of hardcoded name in assertion, name "gregor-vm"

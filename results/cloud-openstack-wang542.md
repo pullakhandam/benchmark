@@ -1,5 +1,6 @@
 # Cloud-Openstack Benchmark (Chameleon Cloud)
-##Summary
+* Complete output can be accessed [here](https://github.com/cloudmesh-community/fa19-516-157/tree/master/Benchmark_Output)
+## Summary
 * test_08_vm_provider failed due to wrong key name, the keyname wang542-key was set by test, not by user
 
 ## test_00_sys

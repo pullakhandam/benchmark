@@ -1,22 +1,25 @@
 Put your benchmarks in the results repository.
+
+IF A BENCHMARK DOES NOT WORK OR FAILS, PLEASE FIX IT.
+ENGAGE IN DISCUSSION ON PIAZZA.
+
 File naming conventions should match the following:
 
 ## Local, Security, and Cloud Tests
-
-- 1_local-aws-USERNAME.md
-- 2_local-aws-USERNAME.md
-- 2_security-aws-USERNAME.md
-- cloud-aws-USERNAME.md
+- 1_local-aws-USERNAME.txt
+- 2_local-aws-USERNAME.txt
+- 2_security-aws-USERNAME.txt
+- cloud-aws-USERNAME.txt
 
 ## Others
 
-- aws-USERNAME.md
-- azure-USERNAME.md
-- google-USERNAME.md
+- aws-USERNAME.txt
+- azure-USERNAMEtxt
+- google-USERNAME.txt
 
 ## Storage Tests
 
-- storage-USERNAME.md
+- storage-USERNAME.txt
 
 ## Notes
 

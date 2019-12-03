@@ -1,4 +1,5 @@
 # Cloud-AWS Benchmark
+* Complete output can be accessed [here](https://github.com/cloudmesh-community/fa19-516-157/tree/master/Benchmark_Output)
 ## Summary
 * test_05_image failed during saving data to mongodb, encountered the same error in custom test script. Data was successfully retrieved
 * test_08_vm_provider failed likely due to the same error as openstack, wrong key name lookup, the key name wang542-key doesn't exist on aws, that interrupted the creation of vm and the vm functions afterwards all failed

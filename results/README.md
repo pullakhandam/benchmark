@@ -5,10 +5,13 @@ ENGAGE IN DISCUSSION ON PIAZZA.
 
 File naming conventions should match the following:
 
+USERNAME is your unique username
+
 ## Local, Security, and Cloud Tests
-- 1_local-aws-USERNAME.txt
-- 2_local-aws-USERNAME.txt
-- 2_security-aws-USERNAME.txt
+
+- 1_local-USERNAME.txt
+- 2_local-USERNAME.txt
+- 2_security-USERNAME.txt
 - cloud-aws-USERNAME.txt
 
 ## Others
@@ -24,3 +27,15 @@ File naming conventions should match the following:
 ## Notes
 
 - other storage tests are in cloudmesh-storage\tests
+
+## How to create the output
+
+let us assume you like to execute all tests in teh directory: 
+
+    1_local
+
+Then you use the command, 
+
+pytest -v --capture=no  tests/1_local > 1_local-USERNAME.txt
+
+YOu only have to execute the local tests once

@@ -2,6 +2,7 @@ Put your benchmarks in the results repository.
 File naming conventions should match the following:
 
 ## Local, Security, and Cloud Tests
+
 - 1_local-aws-USERNAME.md
 - 2_local-aws-USERNAME.md
 - 2_security-aws-USERNAME.md

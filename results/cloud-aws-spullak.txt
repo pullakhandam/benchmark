@@ -1,0 +1,345 @@
+# AWS Benchmarks (2_security)
+
+## cloud-aws-spullak.md
+
+### test_00_sys.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_00_sys.py
+ 
+Results:
+tests/cloud/test_00_sys.py::Test_Sys::test_benchmark 
++---------------------+------------------------------------------------------------------+
+| Machine Attribute   | Value                                                            |
++---------------------+------------------------------------------------------------------+
+| BUG_REPORT_URL      | "https://bugs.launchpad.net/ubuntu/"                             |
+| DISTRIB_CODENAME    | bionic                                                           |
+| DISTRIB_DESCRIPTION | "Ubuntu 18.04.3 LTS"                                             |
+| DISTRIB_ID          | Ubuntu                                                           |
+| DISTRIB_RELEASE     | 18.04                                                            |
+| HOME_URL            | "https://www.ubuntu.com/"                                        |
+| ID                  | ubuntu                                                           |
+| ID_LIKE             | debian                                                           |
+| NAME                | "Ubuntu"                                                         |
+| PRETTY_NAME         | "Ubuntu 18.04.3 LTS"                                             |
+| PRIVACY_POLICY_URL  | "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" |
+| SUPPORT_URL         | "https://help.ubuntu.com/"                                       |
+| UBUNTU_CODENAME     | bionic                                                           |
+| VERSION             | "18.04.3 LTS (Bionic Beaver)"                                    |
+| VERSION_CODENAME    | bionic                                                           |
+| VERSION_ID          | "18.04"                                                          |
+| cpu_count           | 8                                                                |
+| mac_version         |                                                                  |
+| machine             | ('x86_64',)                                                      |
+| mem_active          | 773.6 MiB                                                        |
+| mem_available       | 28.6 GiB                                                         |
+| mem_free            | 28.1 GiB                                                         |
+| mem_inactive        | 299.7 MiB                                                        |
+| mem_percent         | 2.9%                                                             |
+| mem_total           | 29.4 GiB                                                         |
+| mem_used            | 503.6 MiB                                                        |
+| node                | ('instance-1',)                                                  |
+| platform            | Linux-5.0.0-1026-gcp-x86_64-with-Ubuntu-18.04-bionic             |
+| processor           | ('x86_64',)                                                      |
+| processors          | Linux                                                            |
+| python              | 3.7.5 (default, Oct 15 2019, 22:40:07)                           |
+|                     | [GCC 7.4.0]                                                      |
+| release             | ('5.0.0-1026-gcp',)                                              |
+| sys                 | linux                                                            |
+| system              | Linux                                                            |
+| user                | sriman_mca                                                       |
+| version             | #27~18.04.1-Ubuntu SMP Fri Nov 15 07:40:39 UTC 2019              |
+| win_version         |                                                                  |
++---------------------+------------------------------------------------------------------+
++---------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                     | time  | start               | tag | node            | user       | system | mac_version | win_version |
++---------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help | 1.536 | 2019-12-12 01:03:46 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop      | 0.0   | 2019-12-12 01:03:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++---------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_00_sys/test_cms_help,1.536,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================================================================================================================== 2 passed in 2.05s =====================================================
+
+### test_01_clean_local_remote.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_01_clean_local_remote.py
+ 
+Results:
+tests/cloud/test_01_clean_local_remote.py::Test_Clean_Local_Remote::test_benchmark 
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time   | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_01_clean_local_remote/test_cms_init                        | 11.577 | 2019-12-12 01:05:02 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.091  | 2019-12-12 01:05:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001  | 2019-12-12 01:05:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0    | 2019-12-12 01:05:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+PASSED
+
+============================================================================================================================== 4 passed in 12.94s ======================================================
+
+### test_02_key.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_02_key.py
+ 
+Results:
+tests/cloud/test_02_key.py::Test_Key::test_benchmark 
++-----------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                   | time  | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_02_key/test_upload_key_to_database | 0.04  | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud    | 0.079 | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud    | 0.083 | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud  | 0.08  | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                    | 0.0   | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_02_key/test_upload_key_to_database,0.04,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.079,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.08,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================================================================================================================== 7 passed in 2.01s ==========================
+### test_03_key_upload.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_03_key_upload.py
+ 
+Results:
+tests/cloud/test_03_key_upload.py::Test_Key::test_benchmark 
++------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                          | time  | start               | tag | node            | user       | system | mac_version | win_version |
++------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_03_key_upload/test_upload_key_to_database | 0.035 | 2019-12-12 01:08:40 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud    | 0.079 | 2019-12-12 01:08:40 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud    | 0.099 | 2019-12-12 01:08:41 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                           | 0.0   | 2019-12-12 01:08:41 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_03_key_upload/test_upload_key_to_database,0.035,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.079,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.099,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================================================================================================================== 5 passed in 1.80s ==================
+
+### test_04_flavor.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_04_flavor.py
+ 
+Results:
++--------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                      | time    | start               | tag | node            | user       | system | mac_version | win_version |
++--------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_04_flavor/test_empty_database         | 0.03    | 2019-12-12 01:09:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor        | 264.253 | 2019-12-12 01:09:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update | 582.044 | 2019-12-12 01:13:44 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh     | 552.332 | 2019-12-12 01:23:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor             | 6.558   | 2019-12-12 01:32:39 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                       | 0.0     | 2019-12-12 01:32:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++--------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_04_flavor/test_empty_database,0.03,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,264.253,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,582.044,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,552.332,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.558,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+======================================================================================================================== 6 passed in 1406.78s (0:23:26) =======
+### test_05_image.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_05_image.py
+ 
+Results:
++------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                    | time   | start               | tag | node            | user       | system | mac_version | win_version |
++------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_05_image/test_empty_database        | 0.033  | 2019-12-12 01:34:54 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image        | 32.033 | 2019-12-12 01:34:54 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image_update | 29.14  | 2019-12-12 01:35:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image_refresh     | 33.315 | 2019-12-12 01:35:55 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image             | 14.083 | 2019-12-12 01:36:29 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                     | 0.0    | 2019-12-12 01:36:43 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_05_image/test_empty_database,0.033,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image,32.033,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image_update,29.14,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image_refresh,33.315,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image,14.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+======================================================================================================================== 6 passed in 109.57s (0:01:49) ===============
+
+### test_06_sec_command.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_06_sec_command.py
+ 
+Results:
++-----------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                         | time  | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_06_sec_command/test_group_add            | 2.291 | 2019-12-12 01:38:04 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_delete         | 2.252 | 2019-12-12 01:38:06 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_list             | 2.238 | 2019-12-12 01:38:16 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_local | 2.295 | 2019-12-12 01:38:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_cloud | 2.444 | 2019-12-12 01:38:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                          | 0.0   | 2019-12-12 01:38:23 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_06_sec_command/test_group_add,2.291,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_delete,2.252,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_list,2.238,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_local,2.295,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_cloud,2.444,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================================================================================================================== 9 passed in 19.63s =================
+### test_07_secgroup_provider.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_07_secgroup_provider.py
+ 
+Results:
++-------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                 | time  | start               | tag | node            | user       | system | mac_version | win_version |
++-------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_07_secgroup_provider/test_load                   | 0.052 | 2019-12-12 01:38:44 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_variables         | 0.002 | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups         | 0.17  | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups_rules   | 0.084 | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_add          | 0.17  | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_upload_secgroup        | 1.263 | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete       | 0.138 | 2019-12-12 01:38:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete_again | 0.074 | 2019-12-12 01:38:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                  | 0.0   | 2019-12-12 01:38:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_07_secgroup_provider/test_load,0.052,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_variables,0.002,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups,0.17,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups_rules,0.084,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_add,0.17,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_upload_secgroup,1.263,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete,0.138,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete_again,0.074,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================================================================================================================== 9 passed in 4.12s ==================
+### test_08_vm_provider.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_08_vm_provider.py
+ 
+Results:
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_benchmark 
++------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                | time   | start               | tag | node            | user       | system | mac_version | win_version |
++------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_08_vm_provider/test_provider_vm_create          | 24.837 | 2019-12-12 01:39:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| create vm test-spullak-vm-2                          | 23.381 | 2019-12-12 01:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vmprovider_vm_list | 0.306  | 2019-12-12 01:39:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_wait            | 16.909 | 2019-12-12 01:39:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_ssh             | 0.789  | 2019-12-12 01:40:13 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_info            | 0.247  | 2019-12-12 01:40:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_vm_status                   | 0.161  | 2019-12-12 01:40:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_stop            | 31.117 | 2019-12-12 01:40:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_start           | 31.146 | 2019-12-12 01:40:50 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_terminate       | 30.926 | 2019-12-12 01:41:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                 | 0.0    | 2019-12-12 01:42:03 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_08_vm_provider/test_provider_vm_create,24.837,None,('instance-1',),sriman_mca,Linux,,
+#csv,create vm test-spullak-vm-2,23.381,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vmprovider_vm_list,0.306,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_wait,16.909,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_ssh,0.789,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_info,0.247,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_vm_status,0.161,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_stop,31.117,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_start,31.146,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_terminate,30.926,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+=================================================================================================================== 10 passed in 153.51s (0:02:33) ===========
+### test_09_cm_names_find.py
+
+Executed:
+ pytest -v --capture=no tests/cloud/test_09_cm_names_find.py
+ 
+Results:
++-----------------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time  | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_09_cm_names_find/test_cm_find_collection                   | 0.03  | 2019-12-12 01:44:33 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_loop                         | 2.163 | 2019-12-12 01:44:33 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_image_name_cloud                  | 0.202 | 2019-12-12 01:44:36 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_image_name_collection             | 0.206 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_names_regexp                         | 0.192 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vms                          | 0.018 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_ubuntu_in_images             | 0.12  | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_cloud_name_attributes        | 0.016 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vm_collections               | 0.014 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vm_collections_vm            | 0.016 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vm_collection_form_parameter | 0.015 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0   | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,test_09_cm_names_find/test_cm_find_collection,0.03,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_loop,2.163,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_image_name_cloud,0.202,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_image_name_collection,0.206,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_names_regexp,0.192,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_vms,0.018,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_ubuntu_in_images,0.12,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_cloud_name_attributes,0.016,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_vm_collections,0.014,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_vm_collections_vm,0.016,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_vm_collection_form_parameter,0.015,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================================================================================================================== 13 passed in 4.29s =======
+
+
+
+
+
+
+
+
+

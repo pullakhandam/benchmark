@@ -1,13 +1,87 @@
-# AWS Benchmarks (2_security)
+============================= test session starts ==============================
+platform linux -- Python 3.7.5, pytest-5.2.1, py-1.8.0, pluggy-0.13.0 -- /home/sriman_mca/ENV3/bin/python
+cachedir: .pytest_cache
+rootdir: /home/sriman_mca/cm/cloudmesh-cloud, inifile: pytest.ini
+collecting ... Test run for aws
+Test run for aws
+Test run for aws
+Test run for aws
+Test run for aws
+Test run for aws
+[34m
+# ----------------------------------------------------------------------
+# variables.dict()
+# ----------------------------------------------------------------------
+# 28:<module> ./tests/cloud/test_07_secgroup_provider.py
+# ----------------------------------------------------------------------
+# {'a': '2019-12-13 03:15:47',
+#  'cloud': 'aws',
+#  'cluster': 'clustera',
+#  'debug': 'True',
+#  'experiment': 'base',
+#  'group': 'cloudmesh',
+#  'key': 'spullak-key',
+#  'refresh': 'False',
+#  'timer': 'True',
+#  'trace': 'True',
+#  'verbose': '10',
+#  'vm': 'test-spullak-vm-7'}
+# ----------------------------------------------------------------------
+[0m
+Test run for aws
+[34m
+# ----------------------------------------------------------------------
+# variables.dict()
+# ----------------------------------------------------------------------
+# 26:<module> ./tests/cloud/test_08_vm_provider.py
+# ----------------------------------------------------------------------
+# {'a': '2019-12-13 03:15:47',
+#  'cloud': 'aws',
+#  'cluster': 'clustera',
+#  'debug': 'True',
+#  'experiment': 'base',
+#  'group': 'cloudmesh',
+#  'key': 'spullak-key',
+#  'refresh': 'False',
+#  'timer': 'True',
+#  'trace': 'True',
+#  'verbose': '10',
+#  'vm': 'test-spullak-vm-7'}
+# ----------------------------------------------------------------------
+[0m
+Test run for aws
+collected 71 items
 
-## cloud-aws-spullak.md
-
-### test_00_sys.py
-
-Executed:
- pytest -v --capture=no tests/cloud/test_00_sys.py
- 
-Results:
+tests/cloud/test_00_sys.py::Test_Sys::test_cms_help 
+[35m
+# ######################################################################
+# test_cms_help /tests/cloud/test_00_sys.py 30
+# ######################################################################
+[0m
+[34m
+# ----------------------------------------------------------------------
+# result
+# ----------------------------------------------------------------------
+# 36:test_cms_help ./tests/cloud/test_00_sys.py
+# ----------------------------------------------------------------------
+# ('Documented commands (type help <topic>):\n'
+#  '========================================\n'
+#  'EOF        data     host       man       register  ssh        '
+#  'vcluster      \n'
+#  'admin      debug    image      open      sec       start      '
+#  'version       \n'
+#  'banner     default  info       pause     service   stop       '
+#  'vm            \n'
+#  'clear      echo     init       plugin    set       stopwatch  '
+#  'workflow_draft\n'
+#  'commands   flavor   inventory  provider  shell     sys      \n'
+#  'config     group    ip         q         sleep     var      \n'
+#  'container  help     key        quit      source    vbox     \n'
+#  '\n'
+#  'Timer: 0.0000s (help)')
+# ----------------------------------------------------------------------
+[0m
+PASSED
 tests/cloud/test_00_sys.py::Test_Sys::test_benchmark 
 +---------------------+------------------------------------------------------------------+
 | Machine Attribute   | Value                                                            |
@@ -31,13 +105,13 @@ tests/cloud/test_00_sys.py::Test_Sys::test_benchmark
 | cpu_count           | 8                                                                |
 | mac_version         |                                                                  |
 | machine             | ('x86_64',)                                                      |
-| mem_active          | 773.6 MiB                                                        |
+| mem_active          | 868.3 MiB                                                        |
 | mem_available       | 28.6 GiB                                                         |
-| mem_free            | 28.1 GiB                                                         |
-| mem_inactive        | 299.7 MiB                                                        |
-| mem_percent         | 2.9%                                                             |
+| mem_free            | 27.8 GiB                                                         |
+| mem_inactive        | 434.4 MiB                                                        |
+| mem_percent         | 3.0%                                                             |
 | mem_total           | 29.4 GiB                                                         |
-| mem_used            | 503.6 MiB                                                        |
+| mem_used            | 508.5 MiB                                                        |
 | node                | ('instance-1',)                                                  |
 | platform            | Linux-5.0.0-1026-gcp-x86_64-with-Ubuntu-18.04-bionic             |
 | processor           | ('x86_64',)                                                      |
@@ -54,291 +128,2302 @@ tests/cloud/test_00_sys.py::Test_Sys::test_benchmark
 +---------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 | timer                     | time  | start               | tag | node            | user       | system | mac_version | win_version |
 +---------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_00_sys/test_cms_help | 1.536 | 2019-12-12 01:03:46 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop      | 0.0   | 2019-12-12 01:03:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_00_sys/test_cms_help | 1.443 | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop      | 0.0   | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
 +---------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_00_sys/test_cms_help,1.536,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
+tests/cloud/test_01_clean_local_remote.py::Test_Clean_Local_Remote::test_cms_init MongoDB stop
+server should be down...
+MongoDB folder deleted
+Set key
+Config Security Initialization
+MongoDB create
+MongoDB create
+INFO: Starting mongo without authentication ... 
+about to fork child process, waiting until server is ready for connections.
+forked process: 2752
+child process started successfully, parent exiting
 
-============================================================================================================================== 2 passed in 2.05s =====================================================
+None
+INFO: Creating admin user ... 
+Administrative user created.
+INFO: Stopping the service ... 
+server should be down...
+Timer: 1.0000s (admin mongo create)
+MongoDB start
+about to fork child process, waiting until server is ready for connections.
+forked process: 2827
+child process started successfully, parent exiting
 
-### test_01_clean_local_remote.py
+None
+Timer: 1.0000s (admin mongo start)
 
-Executed:
- pytest -v --capture=no tests/cloud/test_01_clean_local_remote.py
- 
-Results:
++---------+-------+----------+-----------+-----------+
+| Group   | Rule  | Protocol | Ports     | IP Range  |
++---------+-------+----------+-----------+-----------+
+| default | ssh   | tcp      | 22:22     | 0.0.0.0/0 |
+| default | icmp  | icmp     |           | 0.0.0.0/0 |
+| default | http  | tcp      | 80:80     | 0.0.0.0/0 |
+| default | https | tcp      | 443:443   | 0.0.0.0/0 |
+| flask   | ssh   | tcp      | 22:22     | 0.0.0.0/0 |
+| flask   | icmp  | icmp     |           | 0.0.0.0/0 |
+| flask   | http  | tcp      | 80:80     | 0.0.0.0/0 |
+| flask   | https | tcp      | 443:443   | 0.0.0.0/0 |
+| flask   | flask | tcp      | 8000:8000 | 0.0.0.0/0 |
++---------+-------+----------+-----------+-----------+
+Timer: 1.0000s (sec load)
+
+Variables
+
+    trace=True
+    debug=True
+    group=cloudmesh
+    experiment=base
+    cloud=aws
+    cluster=clustera
+    timer=True
+    verbose=10
+    key=spullak
+    vm=test-spullak-vm-7
+    refresh=False
+    a=2019-12-13 03:15:47
+Timer: 9.0000s (init)
+
+[35m
+# ######################################################################
+# test_cms_init /tests/cloud/test_01_clean_local_remote.py 36
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_01_clean_local_remote.py::Test_Clean_Local_Remote::test_delete_all_keys_from_cloud 
+[35m
+# ######################################################################
+# test_delete_all_keys_from_cloud /tests/cloud/test_01_clean_local_remote.py 42
+# ######################################################################
+[0m
+deleting the key: spullak-key -> aws
+None
+PASSED
+tests/cloud/test_01_clean_local_remote.py::Test_Clean_Local_Remote::test_delete_all_secgroups_from_cloud 
+[35m
+# ######################################################################
+# test_delete_all_secgroups_from_cloud /tests/cloud/test_01_clean_local_remote.py 59
+# ######################################################################
+[0m
+PASSED
 tests/cloud/test_01_clean_local_remote.py::Test_Clean_Local_Remote::test_benchmark 
 +-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 | timer                                                           | time   | start               | tag | node            | user       | system | mac_version | win_version |
 +-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_01_clean_local_remote/test_cms_init                        | 11.577 | 2019-12-12 01:05:02 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.091  | 2019-12-12 01:05:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001  | 2019-12-12 01:05:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                                            | 0.0    | 2019-12-12 01:05:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_00_sys/test_cms_help                                       | 1.443  | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0    | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977 | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
 +-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 PASSED
-
-============================================================================================================================== 4 passed in 12.94s ======================================================
-
-### test_02_key.py
-
-Executed:
- pytest -v --capture=no tests/cloud/test_02_key.py
- 
-Results:
+tests/cloud/test_02_key.py::Test_Key::test_cleanup 
+[35m
+# ######################################################################
+# test_cleanup /tests/cloud/test_02_key.py 38
+# ######################################################################
+[0m
+deleting the key: test-key -> aws
+PASSED
+tests/cloud/test_02_key.py::Test_Key::test_upload_key_to_database 
+[35m
+# ######################################################################
+# test_upload_key_to_database /tests/cloud/test_02_key.py 46
+# ######################################################################
+[0m
+<cloudmesh.key.Key.Key object at 0x7ff961557f50>
+PASSED
+tests/cloud/test_02_key.py::Test_Key::test_upload_key_to_cloud 
+[35m
+# ######################################################################
+# test_upload_key_to_cloud /tests/cloud/test_02_key.py 57
+# ######################################################################
+[0m
+{'_id': ObjectId('5df315123601802bbdcbf9d6'),
+ 'cm': {'cloud': 'local',
+        'collection': 'local-key',
+        'created': '2019-12-13 04:35:30.572913',
+        'kind': 'key',
+        'modified': '2019-12-13 04:35:30.572913',
+        'name': 'test-key'},
+ 'comment': 'sriman_mca@instance-1',
+ 'fingerprint': 'f2:92:8d:4f:89:7b:68:4b:fb:60:11:84:c5:9f:d7:df',
+ 'key': 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDHjcZaumdZXa0f0df0N43WEVqtOZNOfFMUlO2mBRMPpmlc2T2gQnqHBIDdXBAa0JddLCDHkbXo5iltwRP0Zpau4hrhNAXtN8zFtTrZTor7/0Hg7PJpQ4NoPn/ryTK6xnElh5xPw448rW+mjtS+ANIswsh1I3TFCgVyDKfxx+4G3LGW+tqbqtW5s+VpEgxZ7Uk6PPL+D5IGhdCGD85HTtZyjSznSm1Hs0L8vvxsjfnLr4YECNLjUUw28XOvYLmwpIDOjbyO2Loe7ENJ4djodabTCSuHpblk9ma/gKflUktVJK7FPHFo7u5zLWlxCq2eE3Ggj1Wvsmitw48B2OE6GMC/',
+ 'location': {'private': '/home/sriman_mca/.ssh/id_rsa',
+              'public': '/home/sriman_mca/.ssh/id_rsa.pub'},
+ 'name': 'test-key',
+ 'path': '/home/sriman_mca/.ssh/id_rsa.pub',
+ 'profile': {'email': 'spullak@iu.edu',
+             'firstname': 'Sriman',
+             'github': 'TBD',
+             'lastname': 'Pullakhandam',
+             'publickey': '~/.ssh/id_rsa.pub',
+             'user': 'spullak'},
+ 'public_key': 'ssh-rsa '
+               'AAAAB3NzaC1yc2EAAAADAQABAAABAQDHjcZaumdZXa0f0df0N43WEVqtOZNOfFMUlO2mBRMPpmlc2T2gQnqHBIDdXBAa0JddLCDHkbXo5iltwRP0Zpau4hrhNAXtN8zFtTrZTor7/0Hg7PJpQ4NoPn/ryTK6xnElh5xPw448rW+mjtS+ANIswsh1I3TFCgVyDKfxx+4G3LGW+tqbqtW5s+VpEgxZ7Uk6PPL+D5IGhdCGD85HTtZyjSznSm1Hs0L8vvxsjfnLr4YECNLjUUw28XOvYLmwpIDOjbyO2Loe7ENJ4djodabTCSuHpblk9ma/gKflUktVJK7FPHFo7u5zLWlxCq2eE3Ggj1Wvsmitw48B2OE6GMC/ '
+               'sriman_mca@instance-1',
+ 'source': 'ssh',
+ 'type': 'ssh-rsa',
+ 'uri': 'file:///home/sriman_mca/.ssh/id_rsa.pub'}
+uploading the key: test-key -> aws
+PASSED
+tests/cloud/test_02_key.py::Test_Key::test_list_key_from_cloud 
+[35m
+# ######################################################################
+# test_list_key_from_cloud /tests/cloud/test_02_key.py 73
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_02_key.py::Test_Key::test_delete_key_from_cloud 
+[35m
+# ######################################################################
+# test_delete_key_from_cloud /tests/cloud/test_02_key.py 91
+# ######################################################################
+[0m
+deleting the key: test-key -> aws
+None
+PASSED
+tests/cloud/test_02_key.py::Test_Key::test_get_key_from_cloud 
+[35m
+# ######################################################################
+# test_get_key_from_cloud /tests/cloud/test_02_key.py 101
+# ######################################################################
+[0m
+PASSED
 tests/cloud/test_02_key.py::Test_Key::test_benchmark 
-+-----------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                   | time  | start               | tag | node            | user       | system | mac_version | win_version |
-+-----------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_02_key/test_upload_key_to_database | 0.04  | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_02_key/test_upload_key_to_cloud    | 0.079 | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_02_key/test_list_key_from_cloud    | 0.083 | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_02_key/test_delete_key_from_cloud  | 0.08  | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                    | 0.0   | 2019-12-12 01:07:49 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+-----------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time   | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443  | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0    | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977 | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_02_key/test_upload_key_to_database,0.04,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_02_key/test_upload_key_to_cloud,0.079,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_02_key/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_02_key/test_delete_key_from_cloud,0.08,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
-
-============================================================================================================================== 7 passed in 2.01s ==========================
-### test_03_key_upload.py
-
-Executed:
- pytest -v --capture=no tests/cloud/test_03_key_upload.py
- 
-Results:
+tests/cloud/test_03_key_upload.py::Test_Key::test_cleanup 
+[35m
+# ######################################################################
+# test_cleanup /tests/cloud/test_03_key_upload.py 38
+# ######################################################################
+[0m
+deleting the key: spullak-key -> aws
+PASSED
+tests/cloud/test_03_key_upload.py::Test_Key::test_upload_key_to_database 
+[35m
+# ######################################################################
+# test_upload_key_to_database /tests/cloud/test_03_key_upload.py 46
+# ######################################################################
+[0m
+<cloudmesh.key.Key.Key object at 0x7ff961557e50>
+PASSED
+tests/cloud/test_03_key_upload.py::Test_Key::test_upload_key_to_cloud 
+[35m
+# ######################################################################
+# test_upload_key_to_cloud /tests/cloud/test_03_key_upload.py 57
+# ######################################################################
+[0m
+{'_id': ObjectId('5df315133601802bbdcbf9d8'),
+ 'cm': {'cloud': 'local',
+        'collection': 'local-key',
+        'created': '2019-12-13 04:35:31.568614',
+        'kind': 'key',
+        'modified': '2019-12-13 04:35:31.568614',
+        'name': 'spullak-key'},
+ 'comment': 'sriman_mca@instance-1',
+ 'fingerprint': 'f2:92:8d:4f:89:7b:68:4b:fb:60:11:84:c5:9f:d7:df',
+ 'key': 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDHjcZaumdZXa0f0df0N43WEVqtOZNOfFMUlO2mBRMPpmlc2T2gQnqHBIDdXBAa0JddLCDHkbXo5iltwRP0Zpau4hrhNAXtN8zFtTrZTor7/0Hg7PJpQ4NoPn/ryTK6xnElh5xPw448rW+mjtS+ANIswsh1I3TFCgVyDKfxx+4G3LGW+tqbqtW5s+VpEgxZ7Uk6PPL+D5IGhdCGD85HTtZyjSznSm1Hs0L8vvxsjfnLr4YECNLjUUw28XOvYLmwpIDOjbyO2Loe7ENJ4djodabTCSuHpblk9ma/gKflUktVJK7FPHFo7u5zLWlxCq2eE3Ggj1Wvsmitw48B2OE6GMC/',
+ 'location': {'private': '/home/sriman_mca/.ssh/id_rsa',
+              'public': '/home/sriman_mca/.ssh/id_rsa.pub'},
+ 'name': 'spullak-key',
+ 'path': '/home/sriman_mca/.ssh/id_rsa.pub',
+ 'profile': {'email': 'spullak@iu.edu',
+             'firstname': 'Sriman',
+             'github': 'TBD',
+             'lastname': 'Pullakhandam',
+             'publickey': '~/.ssh/id_rsa.pub',
+             'user': 'spullak'},
+ 'public_key': 'ssh-rsa '
+               'AAAAB3NzaC1yc2EAAAADAQABAAABAQDHjcZaumdZXa0f0df0N43WEVqtOZNOfFMUlO2mBRMPpmlc2T2gQnqHBIDdXBAa0JddLCDHkbXo5iltwRP0Zpau4hrhNAXtN8zFtTrZTor7/0Hg7PJpQ4NoPn/ryTK6xnElh5xPw448rW+mjtS+ANIswsh1I3TFCgVyDKfxx+4G3LGW+tqbqtW5s+VpEgxZ7Uk6PPL+D5IGhdCGD85HTtZyjSznSm1Hs0L8vvxsjfnLr4YECNLjUUw28XOvYLmwpIDOjbyO2Loe7ENJ4djodabTCSuHpblk9ma/gKflUktVJK7FPHFo7u5zLWlxCq2eE3Ggj1Wvsmitw48B2OE6GMC/ '
+               'sriman_mca@instance-1',
+ 'source': 'ssh',
+ 'type': 'ssh-rsa',
+ 'uri': 'file:///home/sriman_mca/.ssh/id_rsa.pub'}
+uploading the key: spullak-key -> aws
+PASSED
+tests/cloud/test_03_key_upload.py::Test_Key::test_list_key_from_cloud 
+[35m
+# ######################################################################
+# test_list_key_from_cloud /tests/cloud/test_03_key_upload.py 78
+# ######################################################################
+[0m
+PASSED
 tests/cloud/test_03_key_upload.py::Test_Key::test_benchmark 
-+------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                          | time  | start               | tag | node            | user       | system | mac_version | win_version |
-+------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_03_key_upload/test_upload_key_to_database | 0.035 | 2019-12-12 01:08:40 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_03_key_upload/test_upload_key_to_cloud    | 0.079 | 2019-12-12 01:08:40 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_03_key_upload/test_list_key_from_cloud    | 0.099 | 2019-12-12 01:08:41 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                           | 0.0   | 2019-12-12 01:08:41 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time   | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443  | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0    | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977 | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091  | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083  | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_03_key_upload/test_upload_key_to_database,0.035,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_03_key_upload/test_upload_key_to_cloud,0.079,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_03_key_upload/test_list_key_from_cloud,0.099,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
-
-============================================================================================================================== 5 passed in 1.80s ==================
-
-### test_04_flavor.py
-
-Executed:
- pytest -v --capture=no tests/cloud/test_04_flavor.py
- 
-Results:
-+--------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                      | time    | start               | tag | node            | user       | system | mac_version | win_version |
-+--------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_04_flavor/test_empty_database         | 0.03    | 2019-12-12 01:09:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_04_flavor/test_provider_flavor        | 264.253 | 2019-12-12 01:09:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_04_flavor/test_provider_flavor_update | 582.044 | 2019-12-12 01:13:44 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_04_flavor/test_cms_flavor_refresh     | 552.332 | 2019-12-12 01:23:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_04_flavor/test_cms_flavor             | 6.558   | 2019-12-12 01:32:39 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                       | 0.0     | 2019-12-12 01:32:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+--------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+tests/cloud/test_04_flavor.py::Test_Flavor::test_empty_database 
+[35m
+# ######################################################################
+# test_empty_database /tests/cloud/test_04_flavor.py 37
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_04_flavor.py::Test_Flavor::test_provider_flavor 
+[35m
+# ######################################################################
+# test_provider_flavor /tests/cloud/test_04_flavor.py 43
+# ######################################################################
+[0m
+fetch: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json
+fetch: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/region_index.json
+fetch: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20191211205100/us-east-1/index.json
+PASSED
+tests/cloud/test_04_flavor.py::Test_Flavor::test_provider_flavor_update 
+[35m
+# ######################################################################
+# test_provider_flavor_update /tests/cloud/test_04_flavor.py 50
+# ######################################################################
+[0m
+fetch: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json
+fetch: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/region_index.json
+fetch: https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/20191211205100/us-east-1/index.json
+PASSED
+tests/cloud/test_04_flavor.py::Test_Flavor::test_cms_flavor_refresh 
+[35m
+# ######################################################################
+# test_cms_flavor_refresh /tests/cloud/test_04_flavor.py 59
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_04_flavor.py::Test_Flavor::test_cms_flavor 
+[35m
+# ######################################################################
+# test_cms_flavor /tests/cloud/test_04_flavor.py 67
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_04_flavor.py::Test_Flavor::test_benchmark 
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time    | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443   | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0     | 2019-12-13 04:55:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977  | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_empty_database                              | 0.301   | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor                             | 238.873 | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update                      | 468.827 | 2019-12-13 04:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh                          | 480.169 | 2019-12-13 04:47:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor                                  | 6.363   | 2019-12-13 04:55:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_04_flavor/test_empty_database,0.03,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_04_flavor/test_provider_flavor,264.253,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_04_flavor/test_provider_flavor_update,582.044,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_04_flavor/test_cms_flavor_refresh,552.332,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_04_flavor/test_cms_flavor,6.558,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_empty_database,0.301,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,238.873,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,468.827,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,480.169,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.363,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
+tests/cloud/test_05_image.py::Test_Image::test_empty_database 
+[35m
+# ######################################################################
+# test_empty_database /tests/cloud/test_05_image.py 37
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_05_image.py::Test_Image::test_provider_image 
+[35m
+# ######################################################################
+# test_provider_image /tests/cloud/test_05_image.py 43
+# ######################################################################
+[0m
+Getting the list of images for aws cloud, this might take a few minutes ...
+[32mImages list for aws cloud retrieved successfully[0m
+Saving the data to file 
+Importing the saved data to database
+2019-12-13T04:55:54.484+0000	connected to: localhost
+2019-12-13T04:55:54.502+0000	dropping: cloudmesh.aws-image
+2019-12-13T04:55:56.235+0000	imported 51999 documents
 
-======================================================================================================================== 6 passed in 1406.78s (0:23:26) =======
-### test_05_image.py
+PASSED
+tests/cloud/test_05_image.py::Test_Image::test_provider_image_update 
+[35m
+# ######################################################################
+# test_provider_image_update /tests/cloud/test_05_image.py 50
+# ######################################################################
+[0m
+Getting the list of images for aws cloud, this might take a few minutes ...
+[32mImages list for aws cloud retrieved successfully[0m
+Collection aws-image dropped to be rewritten
+Saving the data to file 
+Importing the saved data to database
+2019-12-13T04:56:22.459+0000	connected to: localhost
+2019-12-13T04:56:22.477+0000	dropping: cloudmesh.aws-image
+2019-12-13T04:56:24.164+0000	imported 51999 documents
 
-Executed:
- pytest -v --capture=no tests/cloud/test_05_image.py
- 
-Results:
-+------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                    | time   | start               | tag | node            | user       | system | mac_version | win_version |
-+------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_05_image/test_empty_database        | 0.033  | 2019-12-12 01:34:54 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_05_image/test_provider_image        | 32.033 | 2019-12-12 01:34:54 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_05_image/test_provider_image_update | 29.14  | 2019-12-12 01:35:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_05_image/test_cms_image_refresh     | 33.315 | 2019-12-12 01:35:55 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_05_image/test_cms_image             | 14.083 | 2019-12-12 01:36:29 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                     | 0.0    | 2019-12-12 01:36:43 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+PASSED
+tests/cloud/test_05_image.py::Test_Image::test_cms_image_refresh 
+[35m
+# ######################################################################
+# test_cms_image_refresh /tests/cloud/test_05_image.py 59
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_05_image.py::Test_Image::test_cms_image 
+[35m
+# ######################################################################
+# test_cms_image /tests/cloud/test_05_image.py 67
+# ######################################################################
+[0m
+PASSED
+tests/cloud/test_05_image.py::Test_Image::test_benchmark 
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time    | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443   | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0     | 2019-12-13 04:57:09 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977  | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_empty_database                              | 0.301   | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor                             | 238.873 | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update                      | 468.827 | 2019-12-13 04:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh                          | 480.169 | 2019-12-13 04:47:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor                                  | 6.363   | 2019-12-13 04:55:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_empty_database                               | 0.018   | 2019-12-13 04:55:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image                               | 29.564  | 2019-12-13 04:55:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image_update                        | 27.92   | 2019-12-13 04:55:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image_refresh                            | 32.007  | 2019-12-13 04:56:24 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image                                    | 13.147  | 2019-12-13 04:56:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_05_image/test_empty_database,0.033,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_05_image/test_provider_image,32.033,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_05_image/test_provider_image_update,29.14,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_05_image/test_cms_image_refresh,33.315,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_05_image/test_cms_image,14.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_empty_database,0.301,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,238.873,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,468.827,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,480.169,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.363,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_empty_database,0.018,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image,29.564,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image_update,27.92,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image_refresh,32.007,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image,13.147,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_sec_clear PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_group_add 
+[35m
+# ######################################################################
+# test_group_add /tests/cloud/test_06_sec_command.py 70
+# ######################################################################
+[0m
+Timer: 0.0000s (sec group add deleteme empty empty)
 
-======================================================================================================================== 6 passed in 109.57s (0:01:49) ===============
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_group_delete 
+[35m
+# ######################################################################
+# test_group_delete /tests/cloud/test_06_sec_command.py 80
+# ######################################################################
+[0m
+Timer: 0.0000s (sec group delete deleteme)
 
-### test_06_sec_command.py
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_sec_init 
+[35m
+# ######################################################################
+# test_sec_init /tests/cloud/test_06_sec_command.py 89
+# ######################################################################
+[0m
 
-Executed:
- pytest -v --capture=no tests/cloud/test_06_sec_command.py
- 
-Results:
-+-----------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                         | time  | start               | tag | node            | user       | system | mac_version | win_version |
-+-----------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_06_sec_command/test_group_add            | 2.291 | 2019-12-12 01:38:04 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_06_sec_command/test_group_delete         | 2.252 | 2019-12-12 01:38:06 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_06_sec_command/test_sec_list             | 2.238 | 2019-12-12 01:38:16 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_06_sec_command/test_sec_group_list_local | 2.295 | 2019-12-12 01:38:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_06_sec_command/test_sec_group_list_cloud | 2.444 | 2019-12-12 01:38:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                          | 0.0   | 2019-12-12 01:38:23 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+-----------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+Timer: 0.0000s (sec rule add deleteme 101 101 tcp 10.0.0.0/0)
+
+Timer: 0.0000s (sec group add wrong nothing wrong)
+
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_sec_add_group_wrong 
+[35m
+# ######################################################################
+# test_sec_add_group_wrong /tests/cloud/test_06_sec_command.py 108
+# ######################################################################
+[0m
+INFO: Security group doesn't exist
+Timer: 1.0000s (sec group load wrong --cloud=aws)
+
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_sec_list 
+[35m
+# ######################################################################
+# test_sec_list /tests/cloud/test_06_sec_command.py 116
+# ######################################################################
+[0m
++---------+-------------------------------+------------------------+
+| Name    | Rules                         | Description            |
++---------+-------------------------------+------------------------+
+| default | ssh, icmp, http, https        | Default security group |
+| flask   | ssh, icmp, http, https, flask | Flask security group   |
+| wrong   | nothing                       | wrong                  |
++---------+-------------------------------+------------------------+
++----------+----------+-----------+------------+
+| Name     | Protocol | Ports     | IP Range   |
++----------+----------+-----------+------------+
+| ssh      | tcp      | 22:22     | 0.0.0.0/0  |
+| icmp     | icmp     |           | 0.0.0.0/0  |
+| flask    | tcp      | 8000:8000 | 0.0.0.0/0  |
+| http     | tcp      | 80:80     | 0.0.0.0/0  |
+| https    | tcp      | 443:443   | 0.0.0.0/0  |
+| deleteme | tcp      | 101:101   | 10.0.0.0/0 |
++----------+----------+-----------+------------+
+Timer: 0.0000s (sec list)
+
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_sec_group_list_local 
+[35m
+# ######################################################################
+# test_sec_group_list_local /tests/cloud/test_06_sec_command.py 131
+# ######################################################################
+[0m
++---------+-------------------------------+------------------------+
+| Name    | Rules                         | Description            |
++---------+-------------------------------+------------------------+
+| default | ssh, icmp, http, https        | Default security group |
+| flask   | ssh, icmp, http, https, flask | Flask security group   |
+| wrong   | nothing                       | wrong                  |
++---------+-------------------------------+------------------------+
+Timer: 0.0000s (sec group list)
+
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_sec_group_list_cloud 
+[35m
+# ######################################################################
+# test_sec_group_list_cloud /tests/cloud/test_06_sec_command.py 142
+# ######################################################################
+[0m
+cloud aws
++---------+-----------+-----------+----------------+----------------+----------+-----------+-----------------+
+| Name    | Direction | Ethertype | Port range max | Port range min | Protocol | Range     | Remote group id |
++---------+-----------+-----------+----------------+----------------+----------+-----------+-----------------+
+| default | Inbound   |           | 80             | 80             | tcp      | 0.0.0.0/0 |                 |
+| default | Inbound   |           |                |                | -1       |           | sg-a77eb8c9     |
+| default | Inbound   |           | 22             | 22             | tcp      | 0.0.0.0/0 |                 |
+| default | Inbound   |           | 443            | 443            | tcp      | 0.0.0.0/0 |                 |
+| default | Inbound   |           | -1             | -1             | icmp     | 0.0.0.0/0 |                 |
++---------+-----------+-----------+----------------+----------------+----------+-----------+-----------------+
+Timer: 1.0000s (sec group list --cloud=aws)
+
+PASSED
+tests/cloud/test_06_sec_command.py::TestSecCLI::test_benchmark 
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time    | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443   | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0     | 2019-12-13 04:57:25 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977  | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_empty_database                              | 0.301   | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor                             | 238.873 | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update                      | 468.827 | 2019-12-13 04:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh                          | 480.169 | 2019-12-13 04:47:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor                                  | 6.363   | 2019-12-13 04:55:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_empty_database                               | 0.018   | 2019-12-13 04:55:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image                               | 29.564  | 2019-12-13 04:55:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image_update                        | 27.92   | 2019-12-13 04:55:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image_refresh                            | 32.007  | 2019-12-13 04:56:24 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image                                    | 13.147  | 2019-12-13 04:56:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_add                              | 1.921   | 2019-12-13 04:57:09 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_delete                           | 1.899   | 2019-12-13 04:57:11 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_list                               | 1.932   | 2019-12-13 04:57:19 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_local                   | 1.915   | 2019-12-13 04:57:21 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_cloud                   | 1.99    | 2019-12-13 04:57:23 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_06_sec_command/test_group_add,2.291,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_06_sec_command/test_group_delete,2.252,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_06_sec_command/test_sec_list,2.238,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_06_sec_command/test_sec_group_list_local,2.295,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_06_sec_command/test_sec_group_list_cloud,2.444,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_empty_database,0.301,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,238.873,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,468.827,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,480.169,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.363,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_empty_database,0.018,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image,29.564,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image_update,27.92,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image_refresh,32.007,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image,13.147,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_add,1.921,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_delete,1.899,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_list,1.932,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_local,1.915,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_cloud,1.99,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_load 
+[35m
+# ######################################################################
+# test_load /tests/cloud/test_07_secgroup_provider.py 56
+# ######################################################################
+[0m
 
-============================================================================================================================== 9 passed in 19.63s =================
-### test_07_secgroup_provider.py
-
-Executed:
- pytest -v --capture=no tests/cloud/test_07_secgroup_provider.py
- 
-Results:
-+-------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                                 | time  | start               | tag | node            | user       | system | mac_version | win_version |
-+-------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_07_secgroup_provider/test_load                   | 0.052 | 2019-12-12 01:38:44 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_list_variables         | 0.002 | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_list_secgroups         | 0.17  | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_list_secgroups_rules   | 0.084 | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_secgroups_add          | 0.17  | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_upload_secgroup        | 1.263 | 2019-12-12 01:38:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_secgroups_delete       | 0.138 | 2019-12-12 01:38:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_07_secgroup_provider/test_secgroups_delete_again | 0.074 | 2019-12-12 01:38:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                                  | 0.0   | 2019-12-12 01:38:47 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+-------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_list_variables 
+[35m
+# ######################################################################
+# test_list_variables /tests/cloud/test_07_secgroup_provider.py 72
+# ######################################################################
+[0m
+spullak
+aws
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_list_secgroups 
+[35m
+# ######################################################################
+# test_list_secgroups /tests/cloud/test_07_secgroup_provider.py 80
+# ######################################################################
+[0m
+{
+    "0": {
+        "Description": "default VPC security group",
+        "GroupId": "sg-a77eb8c9",
+        "GroupName": "default",
+        "IpPermissions": [
+            {
+                "FromPort": 80,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 80,
+                "UserIdGroupPairs": []
+            },
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": [
+                    {
+                        "GroupId": "sg-a77eb8c9",
+                        "UserId": "799617972514"
+                    }
+                ]
+            },
+            {
+                "FromPort": 22,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [
+                    {
+                        "CidrIpv6": "::/0"
+                    }
+                ],
+                "PrefixListIds": [],
+                "ToPort": 22,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 443,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 443,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": -1,
+                "IpProtocol": "icmp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": -1,
+                "UserIdGroupPairs": []
+            }
+        ],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    }
+}
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_list_secgroups_rules 
+[35m
+# ######################################################################
+# test_list_secgroups_rules /tests/cloud/test_07_secgroup_provider.py 87
+# ######################################################################
+[0m
+{
+    "0": {
+        "IpProtocol": "-1",
+        "IpRanges": [
+            {
+                "CidrIp": "0.0.0.0/0"
+            }
+        ],
+        "Ipv6Ranges": [],
+        "PrefixListIds": [],
+        "UserIdGroupPairs": []
+    }
+}
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_secgroups_add 
+[35m
+# ######################################################################
+# test_secgroups_add /tests/cloud/test_07_secgroup_provider.py 94
+# ######################################################################
+[0m
+[32mSecurity Group Created sg-0646931fa671f42df in vpcvpc-dc7364b4[0m
+{
+    "0": {
+        "Description": "security group crated at 2019-12-13 04:57:26.424230 by spullak",
+        "GroupId": "sg-0646931fa671f42df",
+        "GroupName": "Test_Sec_Group",
+        "IpPermissions": [],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    },
+    "1": {
+        "Description": "default VPC security group",
+        "GroupId": "sg-a77eb8c9",
+        "GroupName": "default",
+        "IpPermissions": [
+            {
+                "FromPort": 80,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 80,
+                "UserIdGroupPairs": []
+            },
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": [
+                    {
+                        "GroupId": "sg-a77eb8c9",
+                        "UserId": "799617972514"
+                    }
+                ]
+            },
+            {
+                "FromPort": 22,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [
+                    {
+                        "CidrIpv6": "::/0"
+                    }
+                ],
+                "PrefixListIds": [],
+                "ToPort": 22,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 443,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 443,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": -1,
+                "IpProtocol": "icmp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": -1,
+                "UserIdGroupPairs": []
+            }
+        ],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    }
+}
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_upload_secgroup 
+[35m
+# ######################################################################
+# test_upload_secgroup /tests/cloud/test_07_secgroup_provider.py 103
+# ######################################################################
+[0m
+Warning group already exists
+[34m
+# ----------------------------------------------------------------------
+# rules
+# ----------------------------------------------------------------------
+# 305:upload_secgroup ./cloudmesh/compute/aws/Provider.py
+# ----------------------------------------------------------------------
+# [{'cm': {'cloud': 'local',
+#          'collection': 'local-secrule',
+#          'created': '2019-12-13 04:57:25.541509',
+#          'kind': 'secrule',
+#          'modified': '2019-12-13 04:57:25.541509',
+#          'name': 'ssh'},
+#   'ip_range': '0.0.0.0/0',
+#   'name': 'ssh',
+#   'ports': '22:22',
+#   'protocol': 'tcp'},
+#  {'cm': {'cloud': 'local',
+#          'collection': 'local-secrule',
+#          'created': '2019-12-13 04:57:25.542719',
+#          'kind': 'secrule',
+#          'modified': '2019-12-13 04:57:25.542719',
+#          'name': 'icmp'},
+#   'ip_range': '0.0.0.0/0',
+#   'name': 'icmp',
+#   'ports': '',
+#   'protocol': 'icmp'},
+#  {'cm': {'cloud': 'local',
+#          'collection': 'local-secrule',
+#          'created': '2019-12-13 04:57:25.543806',
+#          'kind': 'secrule',
+#          'modified': '2019-12-13 04:57:25.543806',
+#          'name': 'flask'},
+#   'ip_range': '0.0.0.0/0',
+#   'name': 'flask',
+#   'ports': '8000:8000',
+#   'protocol': 'tcp'},
+#  {'cm': {'cloud': 'local',
+#          'collection': 'local-secrule',
+#          'created': '2019-12-13 04:57:25.544938',
+#          'kind': 'secrule',
+#          'modified': '2019-12-13 04:57:25.544938',
+#          'name': 'http'},
+#   'ip_range': '0.0.0.0/0',
+#   'name': 'http',
+#   'ports': '80:80',
+#   'protocol': 'tcp'},
+#  {'cm': {'cloud': 'local',
+#          'collection': 'local-secrule',
+#          'created': '2019-12-13 04:57:25.546081',
+#          'kind': 'secrule',
+#          'modified': '2019-12-13 04:57:25.546081',
+#          'name': 'https'},
+#   'ip_range': '0.0.0.0/0',
+#   'name': 'https',
+#   'ports': '443:443',
+#   'protocol': 'tcp'}]
+# ----------------------------------------------------------------------
+[0m
+[34m
+# ----------------------------------------------------------------------
+# groups
+# ----------------------------------------------------------------------
+# 310:upload_secgroup ./cloudmesh/compute/aws/Provider.py
+# ----------------------------------------------------------------------
+# [{'cm': {'cloud': 'local',
+#          'collection': 'local-secgroup',
+#          'created': '2019-12-13 04:57:25.538652',
+#          'kind': 'secgroup',
+#          'modified': '2019-12-13 04:57:25.538652',
+#          'name': 'default'},
+#   'description': 'Default security group',
+#   'name': 'default',
+#   'rules': ['ssh', 'icmp', 'http', 'https']},
+#  {'cm': {'cloud': 'local',
+#          'collection': 'local-secgroup',
+#          'created': '2019-12-13 04:57:25.540228',
+#          'kind': 'secgroup',
+#          'modified': '2019-12-13 04:57:25.540228',
+#          'name': 'flask'},
+#   'description': 'Flask security group',
+#   'name': 'flask',
+#   'rules': ['ssh', 'icmp', 'http', 'https', 'flask']}]
+# ----------------------------------------------------------------------
+[0m
+upload group: Test_Sec_Group
+     rule: ssh
+[32mIngress Successfully Set as {'ResponseMetadata': {'RequestId': 'b96d2227-876c-4e8f-b7c2-d5be6ab54c01', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '259', 'date': 'Fri, 13 Dec 2019 04:57:26 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}[0m
+     rule: icmp
+[32mIngress Successfully Set as {'ResponseMetadata': {'RequestId': '999a0b65-b77a-41ef-a19a-7aafb7ae262c', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '259', 'date': 'Fri, 13 Dec 2019 04:57:26 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}[0m
+     rule: http
+[32mIngress Successfully Set as {'ResponseMetadata': {'RequestId': 'f6de4bdc-b7fb-410c-9644-d929ea6bce22', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '259', 'date': 'Fri, 13 Dec 2019 04:57:27 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}[0m
+     rule: https
+[32mIngress Successfully Set as {'ResponseMetadata': {'RequestId': '7ef00f6d-4b44-44a7-879d-698205feed14', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '259', 'date': 'Fri, 13 Dec 2019 04:57:27 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}[0m
+     rule: flask
+[32mIngress Successfully Set as {'ResponseMetadata': {'RequestId': '7d430648-ad9f-4589-9d75-06814b1fedb8', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8', 'content-length': '259', 'date': 'Fri, 13 Dec 2019 04:57:27 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}[0m
+{
+    "0": {
+        "Description": "security group crated at 2019-12-13 04:57:26.424230 by spullak",
+        "GroupId": "sg-0646931fa671f42df",
+        "GroupName": "Test_Sec_Group",
+        "IpPermissions": [
+            {
+                "FromPort": 80,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 80,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 8000,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 8000,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 22,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 22,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 443,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 443,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": -1,
+                "IpProtocol": "icmp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": -1,
+                "UserIdGroupPairs": []
+            }
+        ],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    },
+    "1": {
+        "Description": "default VPC security group",
+        "GroupId": "sg-a77eb8c9",
+        "GroupName": "default",
+        "IpPermissions": [
+            {
+                "FromPort": 80,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 80,
+                "UserIdGroupPairs": []
+            },
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": [
+                    {
+                        "GroupId": "sg-a77eb8c9",
+                        "UserId": "799617972514"
+                    }
+                ]
+            },
+            {
+                "FromPort": 22,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [
+                    {
+                        "CidrIpv6": "::/0"
+                    }
+                ],
+                "PrefixListIds": [],
+                "ToPort": 22,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 443,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 443,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": -1,
+                "IpProtocol": "icmp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": -1,
+                "UserIdGroupPairs": []
+            }
+        ],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    }
+}
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_secgroups_delete 
+[35m
+# ######################################################################
+# test_secgroups_delete /tests/cloud/test_07_secgroup_provider.py 112
+# ######################################################################
+[0m
+[34m
+# ----------------------------------------------------------------------
+# response
+# ----------------------------------------------------------------------
+# 284:remove_secgroup ./cloudmesh/compute/aws/Provider.py
+# ----------------------------------------------------------------------
+# {'ResponseMetadata': {'HTTPHeaders': {'content-length': '239',
+#                                       'content-type': 'text/xml;charset=UTF-8',
+#                                       'date': 'Fri, 13 Dec 2019 04:57:27 GMT',
+#                                       'server': 'AmazonEC2'},
+#                       'HTTPStatusCode': 200,
+#                       'RequestId': '03edc221-db6f-4adb-8983-831f6a4f3657',
+#                       'RetryAttempts': 0}}
+# ----------------------------------------------------------------------
+[0m
+default
+{
+    "0": {
+        "Description": "default VPC security group",
+        "GroupId": "sg-a77eb8c9",
+        "GroupName": "default",
+        "IpPermissions": [
+            {
+                "FromPort": 80,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 80,
+                "UserIdGroupPairs": []
+            },
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": [
+                    {
+                        "GroupId": "sg-a77eb8c9",
+                        "UserId": "799617972514"
+                    }
+                ]
+            },
+            {
+                "FromPort": 22,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [
+                    {
+                        "CidrIpv6": "::/0"
+                    }
+                ],
+                "PrefixListIds": [],
+                "ToPort": 22,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 443,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 443,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": -1,
+                "IpProtocol": "icmp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": -1,
+                "UserIdGroupPairs": []
+            }
+        ],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    }
+}
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_secgroups_delete_again 
+[35m
+# ######################################################################
+# test_secgroups_delete_again /tests/cloud/test_07_secgroup_provider.py 131
+# ######################################################################
+[0m
+[34mINFO: Security group couldn't be removed as it doesn't exist[0m
+default
+{
+    "0": {
+        "Description": "default VPC security group",
+        "GroupId": "sg-a77eb8c9",
+        "GroupName": "default",
+        "IpPermissions": [
+            {
+                "FromPort": 80,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 80,
+                "UserIdGroupPairs": []
+            },
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": [
+                    {
+                        "GroupId": "sg-a77eb8c9",
+                        "UserId": "799617972514"
+                    }
+                ]
+            },
+            {
+                "FromPort": 22,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [
+                    {
+                        "CidrIpv6": "::/0"
+                    }
+                ],
+                "PrefixListIds": [],
+                "ToPort": 22,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": 443,
+                "IpProtocol": "tcp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": 443,
+                "UserIdGroupPairs": []
+            },
+            {
+                "FromPort": -1,
+                "IpProtocol": "icmp",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "ToPort": -1,
+                "UserIdGroupPairs": []
+            }
+        ],
+        "IpPermissionsEgress": [
+            {
+                "IpProtocol": "-1",
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": [],
+                "UserIdGroupPairs": []
+            }
+        ],
+        "OwnerId": "799617972514",
+        "VpcId": "vpc-dc7364b4"
+    }
+}
+PASSED
+tests/cloud/test_07_secgroup_provider.py::Test_secgroup_provider::test_benchmark 
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time    | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443   | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0     | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977  | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_empty_database                              | 0.301   | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor                             | 238.873 | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update                      | 468.827 | 2019-12-13 04:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh                          | 480.169 | 2019-12-13 04:47:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor                                  | 6.363   | 2019-12-13 04:55:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_empty_database                               | 0.018   | 2019-12-13 04:55:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image                               | 29.564  | 2019-12-13 04:55:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image_update                        | 27.92   | 2019-12-13 04:55:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image_refresh                            | 32.007  | 2019-12-13 04:56:24 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image                                    | 13.147  | 2019-12-13 04:56:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_add                              | 1.921   | 2019-12-13 04:57:09 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_delete                           | 1.899   | 2019-12-13 04:57:11 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_list                               | 1.932   | 2019-12-13 04:57:19 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_local                   | 1.915   | 2019-12-13 04:57:21 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_cloud                   | 1.99    | 2019-12-13 04:57:23 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_load                             | 0.043   | 2019-12-13 04:57:25 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_variables                   | 0.001   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups                   | 0.184   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups_rules             | 0.11    | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_add                    | 0.184   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_upload_secgroup                  | 1.21    | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete                 | 0.129   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete_again           | 0.073   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_07_secgroup_provider/test_load,0.052,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_list_variables,0.002,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_list_secgroups,0.17,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_list_secgroups_rules,0.084,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_secgroups_add,0.17,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_upload_secgroup,1.263,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_secgroups_delete,0.138,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_07_secgroup_provider/test_secgroups_delete_again,0.074,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_empty_database,0.301,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,238.873,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,468.827,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,480.169,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.363,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_empty_database,0.018,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image,29.564,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image_update,27.92,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image_refresh,32.007,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image,13.147,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_add,1.921,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_delete,1.899,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_list,1.932,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_local,1.915,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_cloud,1.99,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_load,0.043,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_variables,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups,0.184,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups_rules,0.11,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_add,0.184,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_upload_secgroup,1.21,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete,0.129,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete_again,0.073,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_create 
+[35m
+# ######################################################################
+# test_provider_vm_create /tests/cloud/test_08_vm_provider.py 55
+# ######################################################################
+[0m
+[34m
+# ----------------------------------------------------------------------
+# Create Server
+# ----------------------------------------------------------------------
+[0m
+    Name:    test-spullak-vm-2
+    IP:      None
+    Image:   ami-0c929bde1796e1484
+    Size:    t2.medium
+    Public:  None
+    Key:     spullak-key
+    location:None
+    timeout: 360
+    secgroup:None
+    group:   cloudmesh
 
-============================================================================================================================== 9 passed in 4.12s ==================
-### test_08_vm_provider.py
+[32mInstance created...[0m
 
-Executed:
- pytest -v --capture=no tests/cloud/test_08_vm_provider.py
- 
-Results:
+Waiting for the Public IP address assignment ...
+    Public IP:   18.191.186.22
+    Private IP:  172.31.8.141
+{'AmiLaunchIndex': 0,
+ 'Architecture': 'x86_64',
+ 'BlockDeviceMappings': [],
+ 'CapacityReservationSpecification': {'CapacityReservationPreference': 'open'},
+ 'ClientToken': '',
+ 'CpuOptions': {'CoreCount': 2, 'ThreadsPerCore': 1},
+ 'EbsOptimized': False,
+ 'EnaSupport': True,
+ 'HibernationOptions': {'Configured': False},
+ 'Hypervisor': 'xen',
+ 'ImageId': 'ami-0c929bde1796e1484',
+ 'InstanceId': 'i-0d1c3baaee15197ca',
+ 'InstanceType': 't2.medium',
+ 'KeyName': 'spullak-key',
+ 'LaunchTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+ 'Monitoring': {'State': 'disabled'},
+ 'NetworkInterfaces': [{'Attachment': {'AttachTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+                                       'AttachmentId': 'eni-attach-0361bf288aeffdf15',
+                                       'DeleteOnTermination': True,
+                                       'DeviceIndex': 0,
+                                       'Status': 'attaching'},
+                        'Description': '',
+                        'Groups': [{'GroupId': 'sg-a77eb8c9',
+                                    'GroupName': 'default'}],
+                        'InterfaceType': 'interface',
+                        'Ipv6Addresses': [],
+                        'MacAddress': '02:45:f2:47:89:9e',
+                        'NetworkInterfaceId': 'eni-06c670e19d6641896',
+                        'OwnerId': '799617972514',
+                        'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+                        'PrivateIpAddress': '172.31.8.141',
+                        'PrivateIpAddresses': [{'Primary': True,
+                                                'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+                                                'PrivateIpAddress': '172.31.8.141'}],
+                        'SourceDestCheck': True,
+                        'Status': 'in-use',
+                        'SubnetId': 'subnet-d63c03be',
+                        'VpcId': 'vpc-dc7364b4'}],
+ 'Placement': {'AvailabilityZone': 'us-east-2a',
+               'GroupName': '',
+               'Tenancy': 'default'},
+ 'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+ 'PrivateIpAddress': '172.31.8.141',
+ 'ProductCodes': [],
+ 'PublicDnsName': '',
+ 'RootDeviceName': '/dev/sda1',
+ 'RootDeviceType': 'ebs',
+ 'SecurityGroups': [{'GroupId': 'sg-a77eb8c9', 'GroupName': 'default'}],
+ 'SourceDestCheck': True,
+ 'State': {'Code': 0, 'Name': 'pending'},
+ 'StateTransitionReason': '',
+ 'SubnetId': 'subnet-d63c03be',
+ 'Tags': [{'Key': 'cm.name', 'Value': 'test-spullak-vm-2'},
+          {'Key': 'cm.flavor', 'Value': 't2.medium'},
+          {'Key': 'cm.kind', 'Value': 'vm'},
+          {'Key': 'cm.image', 'Value': 'ami-0c929bde1796e1484'},
+          {'Key': 'Name', 'Value': 'test-spullak-vm-2'},
+          {'Key': 'cm.status', 'Value': 'BOOTING'},
+          {'Key': 'cm.user', 'Value': 'spullak'}],
+ 'VirtualizationType': 'hvm',
+ 'VpcId': 'vpc-dc7364b4',
+ 'cm': {'cloud': 'aws',
+        'created': '2019-12-13 04:57:50.213793',
+        'driver': 'aws',
+        'kind': 'vm',
+        'name': ('test-spullak-vm-2',),
+        'updated': '2019-12-13 04:57:50.213793'},
+ 'created': ('12/13/2019, 04:57:29',),
+ 'image': ('ami-0c929bde1796e1484',),
+ 'instance_id': ('i-0d1c3baaee15197ca',),
+ 'key_name': ('spullak-key',),
+ 'kind': 'aws',
+ 'name': ('test-spullak-vm-2',),
+ 'private_ips': '172.31.8.141',
+ 'public_ips': '18.191.186.22',
+ 'status': ('pending',),
+ 'updated': ('12/13/2019, 04:57:29',)}
+[34m
+# ----------------------------------------------------------------------
+# created
+# ----------------------------------------------------------------------
+# 218:create ./cloudmesh/compute/vm/Provider.py
+# ----------------------------------------------------------------------
+# [{'AmiLaunchIndex': 0,
+#   'Architecture': 'x86_64',
+#   'BlockDeviceMappings': [],
+#   'CapacityReservationSpecification': {'CapacityReservationPreference': 'open'},
+#   'ClientToken': '',
+#   'CpuOptions': {'CoreCount': 2, 'ThreadsPerCore': 1},
+#   'EbsOptimized': False,
+#   'EnaSupport': True,
+#   'HibernationOptions': {'Configured': False},
+#   'Hypervisor': 'xen',
+#   'ImageId': 'ami-0c929bde1796e1484',
+#   'InstanceId': 'i-0d1c3baaee15197ca',
+#   'InstanceType': 't2.medium',
+#   'KeyName': 'spullak-key',
+#   'LaunchTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+#   'Monitoring': {'State': 'disabled'},
+#   'NetworkInterfaces': [{'Attachment': {'AttachTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+#                                         'AttachmentId': 'eni-attach-0361bf288aeffdf15',
+#                                         'DeleteOnTermination': True,
+#                                         'DeviceIndex': 0,
+#                                         'Status': 'attaching'},
+#                          'Description': '',
+#                          'Groups': [{'GroupId': 'sg-a77eb8c9',
+#                                      'GroupName': 'default'}],
+#                          'InterfaceType': 'interface',
+#                          'Ipv6Addresses': [],
+#                          'MacAddress': '02:45:f2:47:89:9e',
+#                          'NetworkInterfaceId': 'eni-06c670e19d6641896',
+#                          'OwnerId': '799617972514',
+#                          'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+#                          'PrivateIpAddress': '172.31.8.141',
+#                          'PrivateIpAddresses': [{'Primary': True,
+#                                                  'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+#                                                  'PrivateIpAddress': '172.31.8.141'}],
+#                          'SourceDestCheck': True,
+#                          'Status': 'in-use',
+#                          'SubnetId': 'subnet-d63c03be',
+#                          'VpcId': 'vpc-dc7364b4'}],
+#   'Placement': {'AvailabilityZone': 'us-east-2a',
+#                 'GroupName': '',
+#                 'Tenancy': 'default'},
+#   'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+#   'PrivateIpAddress': '172.31.8.141',
+#   'ProductCodes': [],
+#   'PublicDnsName': '',
+#   'RootDeviceName': '/dev/sda1',
+#   'RootDeviceType': 'ebs',
+#   'SecurityGroups': [{'GroupId': 'sg-a77eb8c9', 'GroupName': 'default'}],
+#   'SourceDestCheck': True,
+#   'State': {'Code': 0, 'Name': 'pending'},
+#   'StateTransitionReason': '',
+#   'SubnetId': 'subnet-d63c03be',
+#   'Tags': [{'Key': 'cm.name', 'Value': 'test-spullak-vm-2'},
+#            {'Key': 'cm.flavor', 'Value': 't2.medium'},
+#            {'Key': 'cm.kind', 'Value': 'vm'},
+#            {'Key': 'cm.image', 'Value': 'ami-0c929bde1796e1484'},
+#            {'Key': 'Name', 'Value': 'test-spullak-vm-2'},
+#            {'Key': 'cm.status', 'Value': 'BOOTING'},
+#            {'Key': 'cm.user', 'Value': 'spullak'}],
+#   'VirtualizationType': 'hvm',
+#   'VpcId': 'vpc-dc7364b4',
+#   '_id': ObjectId('5df31a383601802bbdcc349e'),
+#   'cm': {'cloud': 'aws',
+#          'collection': 'aws-vm',
+#          'created': '2019-12-13 04:57:28.595215',
+#          'creation_time': '22.00',
+#          'group': 'cloudmesh',
+#          'kind': 'vm',
+#          'modified': '2019-12-13 04:57:50.632710',
+#          'name': 'test-spullak-vm-2',
+#          'status': 'available'},
+#   'created': ('12/13/2019, 04:57:29',),
+#   'image': ('ami-0c929bde1796e1484',),
+#   'instance_id': ('i-0d1c3baaee15197ca',),
+#   'key_name': ('spullak-key',),
+#   'kind': 'aws',
+#   'metadata': "{'cm': {'kind': 'vm', 'name': 'test-spullak-vm-2', 'group': "
+#               "'cloudmesh', 'cloud': 'aws', 'status': 'booting', 'collection': "
+#               "'aws-vm', 'created': '2019-12-13 04:57:28.595215', 'modified': "
+#               "'2019-12-13 04:57:28.595215', 'creation_time': '22.00'}, "
+#               "'image': 'ami-0c929bde1796e1484', 'size': 't2.medium'}",
+#   'name': ('test-spullak-vm-2',),
+#   'private_ips': '172.31.8.141',
+#   'public_ips': '18.191.186.22',
+#   'status': ('pending',),
+#   'updated': ('12/13/2019, 04:57:29',)}]
+# ----------------------------------------------------------------------
+[0m
+[34m
+# ----------------------------------------------------------------------
+# data
+# ----------------------------------------------------------------------
+# 62:test_provider_vm_create ./tests/cloud/test_08_vm_provider.py
+# ----------------------------------------------------------------------
+# [{'AmiLaunchIndex': 0,
+#   'Architecture': 'x86_64',
+#   'BlockDeviceMappings': [],
+#   'CapacityReservationSpecification': {'CapacityReservationPreference': 'open'},
+#   'ClientToken': '',
+#   'CpuOptions': {'CoreCount': 2, 'ThreadsPerCore': 1},
+#   'EbsOptimized': False,
+#   'EnaSupport': True,
+#   'HibernationOptions': {'Configured': False},
+#   'Hypervisor': 'xen',
+#   'ImageId': 'ami-0c929bde1796e1484',
+#   'InstanceId': 'i-0d1c3baaee15197ca',
+#   'InstanceType': 't2.medium',
+#   'KeyName': 'spullak-key',
+#   'LaunchTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+#   'Monitoring': {'State': 'disabled'},
+#   'NetworkInterfaces': [{'Attachment': {'AttachTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+#                                         'AttachmentId': 'eni-attach-0361bf288aeffdf15',
+#                                         'DeleteOnTermination': True,
+#                                         'DeviceIndex': 0,
+#                                         'Status': 'attaching'},
+#                          'Description': '',
+#                          'Groups': [{'GroupId': 'sg-a77eb8c9',
+#                                      'GroupName': 'default'}],
+#                          'InterfaceType': 'interface',
+#                          'Ipv6Addresses': [],
+#                          'MacAddress': '02:45:f2:47:89:9e',
+#                          'NetworkInterfaceId': 'eni-06c670e19d6641896',
+#                          'OwnerId': '799617972514',
+#                          'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+#                          'PrivateIpAddress': '172.31.8.141',
+#                          'PrivateIpAddresses': [{'Primary': True,
+#                                                  'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+#                                                  'PrivateIpAddress': '172.31.8.141'}],
+#                          'SourceDestCheck': True,
+#                          'Status': 'in-use',
+#                          'SubnetId': 'subnet-d63c03be',
+#                          'VpcId': 'vpc-dc7364b4'}],
+#   'Placement': {'AvailabilityZone': 'us-east-2a',
+#                 'GroupName': '',
+#                 'Tenancy': 'default'},
+#   'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+#   'PrivateIpAddress': '172.31.8.141',
+#   'ProductCodes': [],
+#   'PublicDnsName': '',
+#   'RootDeviceName': '/dev/sda1',
+#   'RootDeviceType': 'ebs',
+#   'SecurityGroups': [{'GroupId': 'sg-a77eb8c9', 'GroupName': 'default'}],
+#   'SourceDestCheck': True,
+#   'State': {'Code': 0, 'Name': 'pending'},
+#   'StateTransitionReason': '',
+#   'SubnetId': 'subnet-d63c03be',
+#   'Tags': [{'Key': 'cm.name', 'Value': 'test-spullak-vm-2'},
+#            {'Key': 'cm.flavor', 'Value': 't2.medium'},
+#            {'Key': 'cm.kind', 'Value': 'vm'},
+#            {'Key': 'cm.image', 'Value': 'ami-0c929bde1796e1484'},
+#            {'Key': 'Name', 'Value': 'test-spullak-vm-2'},
+#            {'Key': 'cm.status', 'Value': 'BOOTING'},
+#            {'Key': 'cm.user', 'Value': 'spullak'}],
+#   'VirtualizationType': 'hvm',
+#   'VpcId': 'vpc-dc7364b4',
+#   '_id': ObjectId('5df31a383601802bbdcc349e'),
+#   'cm': {'cloud': 'aws',
+#          'collection': 'aws-vm',
+#          'created': '2019-12-13 04:57:28.595215',
+#          'creation_time': '22.00',
+#          'driver': 'aws',
+#          'group': 'cloudmesh',
+#          'kind': 'vm',
+#          'modified': '2019-12-13 04:57:51.617101',
+#          'name': 'test-spullak-vm-2',
+#          'status': 'available',
+#          'updated': '2019-12-13 04:57:50.833905'},
+#   'created': ('12/13/2019, 04:57:29',),
+#   'image': ('ami-0c929bde1796e1484',),
+#   'instance_id': ('i-0d1c3baaee15197ca',),
+#   'key_name': ('spullak-key',),
+#   'kind': 'aws',
+#   'metadata': "{'cm': {'kind': 'vm', 'name': 'test-spullak-vm-2', 'group': "
+#               "'cloudmesh', 'cloud': 'aws', 'status': 'booting', 'collection': "
+#               "'aws-vm', 'created': '2019-12-13 04:57:28.595215', 'modified': "
+#               "'2019-12-13 04:57:28.595215', 'creation_time': '22.00'}, "
+#               "'image': 'ami-0c929bde1796e1484', 'size': 't2.medium'}",
+#   'name': ('test-spullak-vm-2',),
+#   'private_ips': '172.31.8.141',
+#   'public_ips': '18.191.186.22',
+#   'status': ('pending',),
+#   'updated': ('12/13/2019, 04:57:29',)}]
+# ----------------------------------------------------------------------
+[0m
+status: {'name': 'test-spullak-vm-2', 'status:': 'running', 'cm.status': 'BOOTING'}
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vmprovider_vm_list 
+[35m
+# ######################################################################
+# test_provider_vmprovider_vm_list /tests/cloud/test_08_vm_provider.py 75
+# ######################################################################
+[0m
++-------------------+-------+---------------------+------------+-----------------------+---------------+--------------+----------------------+------+
+| Name              | Cloud | Instance ID         | Status     | Image                 | Public IPs    | Private IPs  | Started at           | Kind |
++-------------------+-------+---------------------+------------+-----------------------+---------------+--------------+----------------------+------+
+| test-spullak-vm-7 | aws   | i-04faadd0287c1e546 | terminated | ami-0c929bde1796e1484 |               |              | 12/13/2019, 02:07:50 | vm   |
+| test-spullak-vm-3 | aws   | i-0cc92cdbbd1783d70 | terminated | ami-0c929bde1796e1484 |               |              | 12/13/2019, 04:25:18 | vm   |
+| test-spullak-vm-2 | aws   | i-0d1c3baaee15197ca | running    | ami-0c929bde1796e1484 | 18.191.186.22 | 172.31.8.141 | 12/13/2019, 04:57:29 | vm   |
+| test-spullak-vm-4 | aws   | i-08a2d7821a9ff8a7b | terminated | ami-0c929bde1796e1484 |               |              | 12/13/2019, 04:32:41 | vm   |
+| test-spullak-vm-5 | aws   | i-03177e8f7dfca4029 | terminated | ami-0c929bde1796e1484 |               |              | 12/13/2019, 01:56:12 | vm   |
+| test-spullak-vm-6 | aws   | i-0431b8e3a0cdbfd73 | terminated | ami-0c929bde1796e1484 |               |              | 12/13/2019, 01:59:51 | vm   |
++-------------------+-------+---------------------+------------+-----------------------+---------------+--------------+----------------------+------+
+None
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_wait 
+[35m
+# ######################################################################
+# test_provider_vm_wait /tests/cloud/test_08_vm_provider.py 83
+# ######################################################################
+[0m
+[34mINFO: waiting for instance to be reachable: Interval: 5, Timeout: 360[0m
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /home/sriman_mca/.ssh/id_rsa ubuntu@18.191.186.22 echo IAmReady
+ERROR: [b'ssh: connect to host 18.191.186.22 port 22: Connection refused\r\n']
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /home/sriman_mca/.ssh/id_rsa ubuntu@18.191.186.22 echo IAmReady
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_ssh 
+[35m
+# ######################################################################
+# test_provider_vm_ssh /tests/cloud/test_08_vm_provider.py 92
+# ######################################################################
+[0m
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /home/sriman_mca/.ssh/id_rsa ubuntu@18.191.186.22 "echo IAmAlive"
+IAmAlive
+
+[34m
+# ----------------------------------------------------------------------
+# data
+# ----------------------------------------------------------------------
+# 102:test_provider_vm_ssh ./tests/cloud/test_08_vm_provider.py
+# ----------------------------------------------------------------------
+# 'IAmAlive\n'
+# ----------------------------------------------------------------------
+[0m
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_info 
+[35m
+# ######################################################################
+# test_provider_vm_info /tests/cloud/test_08_vm_provider.py 106
+# ######################################################################
+[0m
+dry run info():
+[{'AmiLaunchIndex': 0,
+  'Architecture': 'x86_64',
+  'BlockDeviceMappings': [{'DeviceName': '/dev/sda1',
+                           'Ebs': {'AttachTime': datetime.datetime(2019, 12, 13, 4, 57, 30, tzinfo=tzlocal()),
+                                   'DeleteOnTermination': True,
+                                   'Status': 'attached',
+                                   'VolumeId': 'vol-04c7081f6253e5da2'}}],
+  'CapacityReservationSpecification': {'CapacityReservationPreference': 'open'},
+  'ClientToken': '',
+  'CpuOptions': {'CoreCount': 2, 'ThreadsPerCore': 1},
+  'EbsOptimized': False,
+  'EnaSupport': True,
+  'HibernationOptions': {'Configured': False},
+  'Hypervisor': 'xen',
+  'ImageId': 'ami-0c929bde1796e1484',
+  'InstanceId': 'i-0d1c3baaee15197ca',
+  'InstanceType': 't2.medium',
+  'KeyName': 'spullak-key',
+  'LaunchTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+  'Monitoring': {'State': 'disabled'},
+  'NetworkInterfaces': [{'Association': {'IpOwnerId': 'amazon',
+                                         'PublicDnsName': 'ec2-18-191-186-22.us-east-2.compute.amazonaws.com',
+                                         'PublicIp': '18.191.186.22'},
+                         'Attachment': {'AttachTime': datetime.datetime(2019, 12, 13, 4, 57, 29, tzinfo=tzlocal()),
+                                        'AttachmentId': 'eni-attach-0361bf288aeffdf15',
+                                        'DeleteOnTermination': True,
+                                        'DeviceIndex': 0,
+                                        'Status': 'attached'},
+                         'Description': '',
+                         'Groups': [{'GroupId': 'sg-a77eb8c9',
+                                     'GroupName': 'default'}],
+                         'InterfaceType': 'interface',
+                         'Ipv6Addresses': [],
+                         'MacAddress': '02:45:f2:47:89:9e',
+                         'NetworkInterfaceId': 'eni-06c670e19d6641896',
+                         'OwnerId': '799617972514',
+                         'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+                         'PrivateIpAddress': '172.31.8.141',
+                         'PrivateIpAddresses': [{'Association': {'IpOwnerId': 'amazon',
+                                                                 'PublicDnsName': 'ec2-18-191-186-22.us-east-2.compute.amazonaws.com',
+                                                                 'PublicIp': '18.191.186.22'},
+                                                 'Primary': True,
+                                                 'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+                                                 'PrivateIpAddress': '172.31.8.141'}],
+                         'SourceDestCheck': True,
+                         'Status': 'in-use',
+                         'SubnetId': 'subnet-d63c03be',
+                         'VpcId': 'vpc-dc7364b4'}],
+  'Placement': {'AvailabilityZone': 'us-east-2a',
+                'GroupName': '',
+                'Tenancy': 'default'},
+  'PrivateDnsName': 'ip-172-31-8-141.us-east-2.compute.internal',
+  'PrivateIpAddress': '172.31.8.141',
+  'ProductCodes': [],
+  'PublicDnsName': 'ec2-18-191-186-22.us-east-2.compute.amazonaws.com',
+  'PublicIpAddress': '18.191.186.22',
+  'RootDeviceName': '/dev/sda1',
+  'RootDeviceType': 'ebs',
+  'SecurityGroups': [{'GroupId': 'sg-a77eb8c9', 'GroupName': 'default'}],
+  'SourceDestCheck': True,
+  'State': {'Code': 16, 'Name': 'running'},
+  'StateTransitionReason': '',
+  'SubnetId': 'subnet-d63c03be',
+  'Tags': [{'Key': 'cm.name', 'Value': 'test-spullak-vm-2'},
+           {'Key': 'cm.flavor', 'Value': 't2.medium'},
+           {'Key': 'cm.kind', 'Value': 'vm'},
+           {'Key': 'cm.image', 'Value': 'ami-0c929bde1796e1484'},
+           {'Key': 'Name', 'Value': 'test-spullak-vm-2'},
+           {'Key': 'cm.status', 'Value': 'BOOTING'},
+           {'Key': 'cm.user', 'Value': 'spullak'}],
+  'VirtualizationType': 'hvm',
+  'VpcId': 'vpc-dc7364b4',
+  'cm': {'flavor': 't2.medium',
+         'image': 'ami-0c929bde1796e1484',
+         'kind': 'vm',
+         'name': 'test-spullak-vm-2',
+         'status': 'BOOTING',
+         'user': 'spullak'},
+  'name': 'test-spullak-vm-2',
+  'status': 'running'}]
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_vm_status 
+[35m
+# ######################################################################
+# test_vm_status /tests/cloud/test_08_vm_provider.py 115
+# ######################################################################
+[0m
+{'name': 'test-spullak-vm-2', 'status:': 'running', 'cm.status': 'BOOTING'}
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_stop 
+[35m
+# ######################################################################
+# test_provider_vm_stop /tests/cloud/test_08_vm_provider.py 131
+# ######################################################################
+[0m
+ec2.instancesCollection(ec2.ServiceResource(), ec2.Instance)
+ec2.instancesCollection(ec2.ServiceResource(), ec2.Instance)
+Stopping Instance..Please wait...
+[32mInstance having Tag:test-spullak-vm-2 and Instance-Id:{each_instance.instance_id} stopped[0m
+[34m
+# ----------------------------------------------------------------------
+# data
+# ----------------------------------------------------------------------
+# 145:test_provider_vm_stop ./tests/cloud/test_08_vm_provider.py
+# ----------------------------------------------------------------------
+# []
+# ----------------------------------------------------------------------
+[0m
+{'name': 'test-spullak-vm-2', 'status:': 'stopped', 'cm.status': 'STOPPED'}
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_start 
+[35m
+# ######################################################################
+# test_provider_vm_start /tests/cloud/test_08_vm_provider.py 149
+# ######################################################################
+[0m
+ec2.instancesCollection(ec2.ServiceResource(), ec2.Instance)
+ec2.instancesCollection(ec2.ServiceResource(), ec2.Instance)
+Starting Instance..Please wait...
+[32mInstance having Tag:test-spullak-vm-2 and Instance-Id:i-0d1c3baaee15197ca started[0m
+[34m
+# ----------------------------------------------------------------------
+# data
+# ----------------------------------------------------------------------
+# 164:test_provider_vm_start ./tests/cloud/test_08_vm_provider.py
+# ----------------------------------------------------------------------
+# []
+# ----------------------------------------------------------------------
+[0m
+{'name': 'test-spullak-vm-2', 'status:': 'running', 'cm.status': 'ACTIVE'}
+PASSED
+tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_provider_vm_terminate 
+[35m
+# ######################################################################
+# test_provider_vm_terminate /tests/cloud/test_08_vm_provider.py 171
+# ######################################################################
+[0m
+ec2.instancesCollection(ec2.ServiceResource(), ec2.Instance)
+ec2.instancesCollection(ec2.ServiceResource(), ec2.Instance)
+Terminating Instance..Please wait...
+[32mInstance having Tag:test-spullak-vm-2 and Instance-Id:i-0d1c3baaee15197ca terminated[0m
+None
+PASSED
 tests/cloud/test_08_vm_provider.py::Test_provider_vm::test_benchmark 
-+------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                                | time   | start               | tag | node            | user       | system | mac_version | win_version |
-+------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_08_vm_provider/test_provider_vm_create          | 24.837 | 2019-12-12 01:39:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| create vm test-spullak-vm-2                          | 23.381 | 2019-12-12 01:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vmprovider_vm_list | 0.306  | 2019-12-12 01:39:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vm_wait            | 16.909 | 2019-12-12 01:39:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vm_ssh             | 0.789  | 2019-12-12 01:40:13 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vm_info            | 0.247  | 2019-12-12 01:40:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_vm_status                   | 0.161  | 2019-12-12 01:40:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vm_stop            | 31.117 | 2019-12-12 01:40:14 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vm_start           | 31.146 | 2019-12-12 01:40:50 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_08_vm_provider/test_provider_vm_terminate       | 30.926 | 2019-12-12 01:41:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                                 | 0.0    | 2019-12-12 01:42:03 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+------------------------------------------------------+--------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time    | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443   | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0     | 2019-12-13 04:59:42 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977  | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_empty_database                              | 0.301   | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor                             | 238.873 | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update                      | 468.827 | 2019-12-13 04:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh                          | 480.169 | 2019-12-13 04:47:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor                                  | 6.363   | 2019-12-13 04:55:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_empty_database                               | 0.018   | 2019-12-13 04:55:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image                               | 29.564  | 2019-12-13 04:55:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image_update                        | 27.92   | 2019-12-13 04:55:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image_refresh                            | 32.007  | 2019-12-13 04:56:24 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image                                    | 13.147  | 2019-12-13 04:56:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_add                              | 1.921   | 2019-12-13 04:57:09 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_delete                           | 1.899   | 2019-12-13 04:57:11 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_list                               | 1.932   | 2019-12-13 04:57:19 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_local                   | 1.915   | 2019-12-13 04:57:21 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_cloud                   | 1.99    | 2019-12-13 04:57:23 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_load                             | 0.043   | 2019-12-13 04:57:25 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_variables                   | 0.001   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups                   | 0.184   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups_rules             | 0.11    | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_add                    | 0.184   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_upload_secgroup                  | 1.21    | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete                 | 0.129   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete_again           | 0.073   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_create                     | 23.09   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| create vm test-spullak-vm-2                                     | 21.651  | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vmprovider_vm_list            | 0.322   | 2019-12-13 04:57:51 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_wait                       | 15.505  | 2019-12-13 04:57:52 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_ssh                        | 0.776   | 2019-12-13 04:58:07 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_info                       | 0.165   | 2019-12-13 04:58:08 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_vm_status                              | 0.162   | 2019-12-13 04:58:08 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_stop                       | 15.923  | 2019-12-13 04:58:08 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_start                      | 31.194  | 2019-12-13 04:58:29 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_terminate                  | 31.029  | 2019-12-13 04:59:06 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_08_vm_provider/test_provider_vm_create,24.837,None,('instance-1',),sriman_mca,Linux,,
-#csv,create vm test-spullak-vm-2,23.381,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vmprovider_vm_list,0.306,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vm_wait,16.909,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vm_ssh,0.789,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vm_info,0.247,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_vm_status,0.161,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vm_stop,31.117,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vm_start,31.146,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_08_vm_provider/test_provider_vm_terminate,30.926,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
 #csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
-=================================================================================================================== 10 passed in 153.51s (0:02:33) ===========
-### test_09_cm_names_find.py
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_empty_database,0.301,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,238.873,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,468.827,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,480.169,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.363,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_empty_database,0.018,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image,29.564,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image_update,27.92,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image_refresh,32.007,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image,13.147,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_add,1.921,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_delete,1.899,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_list,1.932,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_local,1.915,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_cloud,1.99,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_load,0.043,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_variables,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups,0.184,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups_rules,0.11,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_add,0.184,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_upload_secgroup,1.21,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete,0.129,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete_again,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_create,23.09,None,('instance-1',),sriman_mca,Linux,,
+#csv,create vm test-spullak-vm-2,21.651,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vmprovider_vm_list,0.322,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_wait,15.505,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_ssh,0.776,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_info,0.165,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_vm_status,0.162,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_stop,15.923,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_start,31.194,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_terminate,31.029,None,('instance-1',),sriman_mca,Linux,,
 
-Executed:
- pytest -v --capture=no tests/cloud/test_09_cm_names_find.py
- 
-Results:
-+-----------------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| timer                                                           | time  | start               | tag | node            | user       | system | mac_version | win_version |
-+-----------------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
-| test_09_cm_names_find/test_cm_find_collection                   | 0.03  | 2019-12-12 01:44:33 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_loop                         | 2.163 | 2019-12-12 01:44:33 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_image_name_cloud                  | 0.202 | 2019-12-12 01:44:36 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_image_name_collection             | 0.206 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_names_regexp                         | 0.192 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_vms                          | 0.018 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_ubuntu_in_images             | 0.12  | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_cloud_name_attributes        | 0.016 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_vm_collections               | 0.014 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_vm_collections_vm            | 0.016 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| test_09_cm_names_find/test_cm_find_vm_collection_form_parameter | 0.015 | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-| benchmark_start_stop                                            | 0.0   | 2019-12-12 01:44:37 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
-+-----------------------------------------------------------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_collection 
+[35m
+# ######################################################################
+# test_cm_find_collection /tests/cloud/test_09_cm_names_find.py 33
+# ######################################################################
+[0m
+Number of entries [vm] 6
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_loop 
+[35m
+# ######################################################################
+# test_cm_find_loop /tests/cloud/test_09_cm_names_find.py 44
+# ######################################################################
+[0m
+Number of entries [flavor 15023
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_loop 
+[35m
+# ######################################################################
+# test_cm_loop /tests/cloud/test_09_cm_names_find.py 60
+# ######################################################################
+[0m
+Number of entries [flavor] 15023
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_image_name_cloud 
+[35m
+# ######################################################################
+# test_cm_image_name_cloud /tests/cloud/test_09_cm_names_find.py 73
+# ######################################################################
+[0m
+Number of entries [image 51999
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_image_name_collection 
+[35m
+# ######################################################################
+# test_cm_image_name_collection /tests/cloud/test_09_cm_names_find.py 85
+# ######################################################################
+[0m
+Number of entries [image 51999
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_names_regexp 
+[35m
+# ######################################################################
+# test_names_regexp /tests/cloud/test_09_cm_names_find.py 96
+# ######################################################################
+[0m
+Number of entries [image 471
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_vms 
+[35m
+# ######################################################################
+# test_cm_find_vms /tests/cloud/test_09_cm_names_find.py 117
+# ######################################################################
+[0m
+Number of entries [vm 6
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_ubuntu_in_images 
+[35m
+# ######################################################################
+# test_cm_find_ubuntu_in_images /tests/cloud/test_09_cm_names_find.py 128
+# ######################################################################
+[0m
+
+{'name': {'$regex': '.*Ubuntu.*'}}
+Number of entries [image 471
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_cloud_name_attributes 
+[35m
+# ######################################################################
+# test_cm_find_cloud_name_attributes /tests/cloud/test_09_cm_names_find.py 167
+# ######################################################################
+[0m
+
+Number of entries [vm 6
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_vm_collections 
+[35m
+# ######################################################################
+# test_cm_find_vm_collections /tests/cloud/test_09_cm_names_find.py 183
+# ######################################################################
+[0m
+Number of entries [collections] 7
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_vm_collections_vm 
+[35m
+# ######################################################################
+# test_cm_find_vm_collections_vm /tests/cloud/test_09_cm_names_find.py 196
+# ######################################################################
+[0m
+Number of entries [collections] 1
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_cm_find_vm_collection_form_parameter 
+[35m
+# ######################################################################
+# test_cm_find_vm_collection_form_parameter /tests/cloud/test_09_cm_names_find.py 208
+# ######################################################################
+[0m
+Number of entries [collections] 2
+PASSED
+tests/cloud/test_09_cm_names_find.py::Test_cm_find::test_benchmark 
+[35m
+# ######################################################################
+# test_benchmark /tests/cloud/test_09_cm_names_find.py 223
+# ######################################################################
+[0m
+
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer                                                           | time    | start               | tag | node            | user       | system | mac_version | win_version |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| test_00_sys/test_cms_help                                       | 1.443   | 2019-12-13 04:35:17 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| benchmark_start_stop                                            | 0.0     | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_cms_init                        | 10.977  | 2019-12-13 04:35:18 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_keys_from_cloud      | 0.076   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_01_clean_local_remote/test_delete_all_secgroups_from_cloud | 0.001   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_database                         | 0.031   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_upload_key_to_cloud                            | 0.091   | 2019-12-13 04:35:30 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_list_key_from_cloud                            | 0.085   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_02_key/test_delete_key_from_cloud                          | 0.141   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_database                  | 0.032   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_upload_key_to_cloud                     | 0.073   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_03_key_upload/test_list_key_from_cloud                     | 0.083   | 2019-12-13 04:35:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_empty_database                              | 0.301   | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor                             | 238.873 | 2019-12-13 04:35:32 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_provider_flavor_update                      | 468.827 | 2019-12-13 04:39:31 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor_refresh                          | 480.169 | 2019-12-13 04:47:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_04_flavor/test_cms_flavor                                  | 6.363   | 2019-12-13 04:55:20 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_empty_database                               | 0.018   | 2019-12-13 04:55:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image                               | 29.564  | 2019-12-13 04:55:27 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_provider_image_update                        | 27.92   | 2019-12-13 04:55:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image_refresh                            | 32.007  | 2019-12-13 04:56:24 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_05_image/test_cms_image                                    | 13.147  | 2019-12-13 04:56:56 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_add                              | 1.921   | 2019-12-13 04:57:09 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_group_delete                           | 1.899   | 2019-12-13 04:57:11 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_list                               | 1.932   | 2019-12-13 04:57:19 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_local                   | 1.915   | 2019-12-13 04:57:21 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_06_sec_command/test_sec_group_list_cloud                   | 1.99    | 2019-12-13 04:57:23 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_load                             | 0.043   | 2019-12-13 04:57:25 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_variables                   | 0.001   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups                   | 0.184   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_list_secgroups_rules             | 0.11    | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_add                    | 0.184   | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_upload_secgroup                  | 1.21    | 2019-12-13 04:57:26 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete                 | 0.129   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_07_secgroup_provider/test_secgroups_delete_again           | 0.073   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_create                     | 23.09   | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| create vm test-spullak-vm-2                                     | 21.651  | 2019-12-13 04:57:28 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vmprovider_vm_list            | 0.322   | 2019-12-13 04:57:51 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_wait                       | 15.505  | 2019-12-13 04:57:52 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_ssh                        | 0.776   | 2019-12-13 04:58:07 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_info                       | 0.165   | 2019-12-13 04:58:08 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_vm_status                              | 0.162   | 2019-12-13 04:58:08 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_stop                       | 15.923  | 2019-12-13 04:58:08 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_start                      | 31.194  | 2019-12-13 04:58:29 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_08_vm_provider/test_provider_vm_terminate                  | 31.029  | 2019-12-13 04:59:06 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_collection                   | 0.022   | 2019-12-13 04:59:42 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_loop                         | 1.389   | 2019-12-13 04:59:42 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_image_name_cloud                  | 0.18    | 2019-12-13 04:59:44 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_image_name_collection             | 0.183   | 2019-12-13 04:59:44 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_names_regexp                         | 0.171   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vms                          | 0.018   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_ubuntu_in_images             | 0.114   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_cloud_name_attributes        | 0.017   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vm_collections               | 0.017   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vm_collections_vm            | 0.017   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
+| test_09_cm_names_find/test_cm_find_vm_collection_form_parameter | 0.015   | 2019-12-13 04:59:45 | aws | ('instance-1',) | sriman_mca | Linux  |             |             |
++-----------------------------------------------------------------+---------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
 
 csv,timer,time,starttag,node,user,system,mac_version,win_version
-#csv,test_09_cm_names_find/test_cm_find_collection,0.03,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_find_loop,2.163,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_image_name_cloud,0.202,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_image_name_collection,0.206,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_names_regexp,0.192,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_00_sys/test_cms_help,1.443,None,('instance-1',),sriman_mca,Linux,,
+#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_cms_init,10.977,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_keys_from_cloud,0.076,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_01_clean_local_remote/test_delete_all_secgroups_from_cloud,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_database,0.031,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_upload_key_to_cloud,0.091,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_list_key_from_cloud,0.085,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_02_key/test_delete_key_from_cloud,0.141,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_database,0.032,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_upload_key_to_cloud,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_03_key_upload/test_list_key_from_cloud,0.083,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_empty_database,0.301,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor,238.873,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_provider_flavor_update,468.827,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor_refresh,480.169,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_04_flavor/test_cms_flavor,6.363,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_empty_database,0.018,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image,29.564,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_provider_image_update,27.92,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image_refresh,32.007,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_05_image/test_cms_image,13.147,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_add,1.921,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_group_delete,1.899,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_list,1.932,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_local,1.915,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_06_sec_command/test_sec_group_list_cloud,1.99,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_load,0.043,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_variables,0.001,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups,0.184,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_list_secgroups_rules,0.11,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_add,0.184,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_upload_secgroup,1.21,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete,0.129,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_07_secgroup_provider/test_secgroups_delete_again,0.073,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_create,23.09,None,('instance-1',),sriman_mca,Linux,,
+#csv,create vm test-spullak-vm-2,21.651,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vmprovider_vm_list,0.322,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_wait,15.505,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_ssh,0.776,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_info,0.165,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_vm_status,0.162,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_stop,15.923,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_start,31.194,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_08_vm_provider/test_provider_vm_terminate,31.029,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_collection,0.022,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_loop,1.389,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_image_name_cloud,0.18,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_image_name_collection,0.183,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_names_regexp,0.171,None,('instance-1',),sriman_mca,Linux,,
 #csv,test_09_cm_names_find/test_cm_find_vms,0.018,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_find_ubuntu_in_images,0.12,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_find_cloud_name_attributes,0.016,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_find_vm_collections,0.014,None,('instance-1',),sriman_mca,Linux,,
-#csv,test_09_cm_names_find/test_cm_find_vm_collections_vm,0.016,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_ubuntu_in_images,0.114,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_cloud_name_attributes,0.017,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_vm_collections,0.017,None,('instance-1',),sriman_mca,Linux,,
+#csv,test_09_cm_names_find/test_cm_find_vm_collections_vm,0.017,None,('instance-1',),sriman_mca,Linux,,
 #csv,test_09_cm_names_find/test_cm_find_vm_collection_form_parameter,0.015,None,('instance-1',),sriman_mca,Linux,,
-#csv,benchmark_start_stop,0.0,None,('instance-1',),sriman_mca,Linux,,
 
 PASSED
 
-============================================================================================================================== 13 passed in 4.29s =======
-
-
-
-
-
-
-
-
+======================= 71 passed in 1470.80s (0:24:30) ========================

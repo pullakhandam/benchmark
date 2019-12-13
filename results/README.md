@@ -34,8 +34,14 @@ let us assume you like to execute all tests in teh directory:
 
     1_local
 
-Then you use the command, 
+Then you use the command
 
-pytest -v --capture=no  tests/1_local > 1_local-USERNAME.txt
+    pytest -v --capture=no  tests/1_local > 1_local-USERNAME.txt
 
-YOu only have to execute the local tests once
+or 
+
+    pytest -v --capture=no  tests/1_local | tee 1_local-USERNAME.txt
+
+
+You only have to execute the local tests once as the cloud providers ar
+irrelevant for them, e.g. the cloud is "local"

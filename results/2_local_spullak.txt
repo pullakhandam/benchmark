@@ -1,0 +1,103 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.5, pytest-5.2.1, py-1.8.0, pluggy-0.13.0 -- /home/sriman_mca/ENV3/bin/python
+cachedir: .pytest_cache
+rootdir: /home/sriman_mca/cm/cloudmesh-cloud, inifile: pytest.ini
+collecting ... collected 3 items
+
+tests/2_local/test_ssh.py::TestSsh::test_internal_ssh 
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '~/.ssh/id_rsa', 'sriman_mca@127.0.0.1', ' uname -a']
+~/.ssh/id_rsa
+sriman_mca@127.0.0.1
+ uname -a
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '~/.ssh/id_rsa', 'sriman_mca@localhost', ' uname -a']
+~/.ssh/id_rsa
+sriman_mca@localhost
+ uname -a
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '~/.ssh/id_rsa', 'sriman_mca@127.0.0.1', ' uname -a']
+~/.ssh/id_rsa
+sriman_mca@127.0.0.1
+ uname -a
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '~/.ssh/id_rsa', 'sriman_mca@localhost', ' uname -a']
+~/.ssh/id_rsa
+sriman_mca@localhost
+ uname -a
+PASSED
+tests/2_local/test_ssh.py::TestSsh::test_ssh_processors 
+Processors: 1
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@127.0.0.1
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@localhost
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@127.0.0.1
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@localhost
+hostname
+[CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added '127.0.0.1' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added '127.0.0.1' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\n")]
+Processors: 2
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@127.0.0.1
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@localhost
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@localhost
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@127.0.0.1
+hostname
+[CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added '127.0.0.1' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added '127.0.0.1' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\n")]
+Processors: 3
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@localhost
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@127.0.0.1
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@127.0.0.1
+hostname
+['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname']
+/home/sriman_mca/.ssh/id_rsa
+sriman_mca@localhost
+hostname
+[CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added '127.0.0.1' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@127.0.0.1', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added '127.0.0.1' (ECDSA) to the list of known hosts.\r\n"), CompletedProcess(args=['ssh', '-o', 'StrictHostKeyChecking=no', '-o', 'UserKnownHostsFile=/dev/null', '-i', '/home/sriman_mca/.ssh/id_rsa', 'sriman_mca@localhost', 'hostname'], returncode=0, stdout='instance-1\n', stderr=b"Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\n")]
+PASSED
+tests/2_local/test_ssh.py::TestSsh::test_benchmark 
++---------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| timer         | time  | start               | tag | node            | user       | system | mac_version | win_version |
++---------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+| total _ssh    | 2.388 | 2019-12-14 03:40:36 |     | ('instance-1',) | sriman_mca | Linux  |             |             |
+| ssh 127.0.0.1 | 0.596 | 2019-12-14 03:40:37 |     | ('instance-1',) | sriman_mca | Linux  |             |             |
+| ssh localhost | 0.6   | 2019-12-14 03:40:38 |     | ('instance-1',) | sriman_mca | Linux  |             |             |
+| total p=1 c=1 | 2.414 | 2019-12-14 03:40:39 |     | ('instance-1',) | sriman_mca | Linux  |             |             |
+| total p=2 c=1 | 1.308 | 2019-12-14 03:40:41 |     | ('instance-1',) | sriman_mca | Linux  |             |             |
+| total p=3 c=1 | 1.31  | 2019-12-14 03:40:42 |     | ('instance-1',) | sriman_mca | Linux  |             |             |
++---------------+-------+---------------------+-----+-----------------+------------+--------+-------------+-------------+
+
+csv,timer,time,starttag,node,user,system,mac_version,win_version
+#csv,total _ssh,2.388,None,('instance-1',),sriman_mca,Linux,,
+#csv,ssh 127.0.0.1,0.596,None,('instance-1',),sriman_mca,Linux,,
+#csv,ssh localhost,0.6,None,('instance-1',),sriman_mca,Linux,,
+#csv,total p=1 c=1,2.414,None,('instance-1',),sriman_mca,Linux,,
+#csv,total p=2 c=1,1.308,None,('instance-1',),sriman_mca,Linux,,
+#csv,total p=3 c=1,1.31,None,('instance-1',),sriman_mca,Linux,,
+
+PASSED
+
+============================== 3 passed in 7.69s ===============================
